@@ -1,3 +1,12 @@
+import { seedMokkos, seedNotes } from "./data/seeds";
+
+async function seedDB() {
+  seedNotes();
+  if (import.meta.env.MODE === "development") {
+    seedMokkos();
+  }
+}
+
 function Lander() {
   return (
     <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
@@ -9,11 +18,11 @@ function Lander() {
         <ol>
           <li>
             It's an experiment into using spaced-repetition systems for purposes
-            other than boosting retrieval strength.
+            other than boosting memory-retrieval strength.
             <ol type="i">
               <li>
                 It attempts to align the concepts of "programmable attention"
-                and "combinatorial idea-creation"
+                and "combinatorial idea-creation".
               </li>
               <li>
                 See the <code>README.md</code> of{" "}
@@ -40,8 +49,9 @@ function Lander() {
                 connection.
               </li>
               <li>
-                It also means that you can't share URL's, and that you'll lose
-                all data if you delete this browser or break this device.
+                It also means that you can't share URL's with others, and that
+                you'll lose all data if you delete this browser or break this
+                device.
               </li>
               <li>
                 You can, however, export (and reimport) your work as a flat
@@ -63,7 +73,13 @@ function Lander() {
               </li>
             </ol>
           </li>
-          <li>Sound good? Click here to set up your local and get started.</li>
+          <li>
+            Sound good?
+            <button type="button" onClick={seedDB} className="btn btn-link">
+              Click here
+            </button>
+            to add some data and get started!
+          </li>
         </ol>
       </div>
     </div>
