@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import App from "./App";
+import ErrorPage from "./ErrorPage";
 import Lander from "./Lander";
 import About from "./About";
 import Mokkogen from "./Mokkogen";
@@ -16,8 +17,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-    // loader: rootLoader,
-    // errorElement: <ErrorPage />,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: "",
