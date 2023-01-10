@@ -16,6 +16,13 @@ function goNextPage(searchParams, setSearchParams) {
   });
 }
 
+function toggleBuiltins(searchParams, setSearchParams) {
+  setSearchParams({
+    ...searchParams,
+    noBuiltins: !searchParams.noBuiltins,
+  });
+}
+
 function ManageNotes() {
   const [totalNotePageCount, setTotalNotePageCount] = useState();
   const [notes, setNotes] = useState([]);
@@ -27,22 +34,26 @@ function ManageNotes() {
   });
 
   useEffect(() => {
-    async function getTotalNoteCount() {
-      const noteCount = await db.notes.count();
-      const notePages = Math.ceil(noteCount / 10);
-      setTotalNotePageCount(notePages);
-    }
-    getTotalNoteCount();
-  }, []);
+    async function getNotes({ currentPage, noBuiltins }) {
+      const notes = await db.notes.filter((note) => {
+        if (noBuiltins) {
+          return !note.builtin_cue_membership;
+        } else {
+          return true;
+        }
+      });
 
-  useEffect(() => {
-    async function getNotes({ currentPage }) {
-      const notes = await db.notes
+      const totalNotes = await notes.count();
+
+      const paginatedNotes = await notes
         .offset(currentPage * 10)
         .limit(10)
         .toArray();
-      setNotes(notes);
+
+      setTotalNotePageCount(Math.ceil(totalNotes / 10));
+      setNotes(paginatedNotes);
     }
+
     getNotes(searchParams);
   }, [searchParams]);
 
@@ -70,8 +81,13 @@ function ManageNotes() {
                 <input type="checkbox" checked className="checkbox ml-2" />
               </label>
               <label className="label">
-                Include built-in cue notes
-                <input type="checkbox" checked className="checkbox ml-2" />
+                Exclude built-in cue notes
+                <input
+                  type="checkbox"
+                  checked={searchParams.noBuiltins}
+                  onChange={() => toggleBuiltins(searchParams, setSearchParams)}
+                  className="checkbox ml-2"
+                />
               </label>
             </div>
           </form>
