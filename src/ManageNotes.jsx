@@ -19,7 +19,12 @@ function goNextPage(searchParams, setSearchParams) {
 function ManageNotes() {
   const [totalNotePageCount, setTotalNotePageCount] = useState();
   const [notes, setNotes] = useState([]);
-  const [searchParams, setSearchParams] = useState({ currentPage: 0 });
+  const [searchParams, setSearchParams] = useState({
+    currentPage: 0,
+    searchContent: true,
+    searchTags: true,
+    noBuiltins: true,
+  });
 
   useEffect(() => {
     async function getTotalNoteCount() {
@@ -45,7 +50,32 @@ function ManageNotes() {
     <div className="grid grid-cols-1 md:grid-cols-4 xl:grid-cols-3 gap-4">
       <div className="md:col-start-2 md:col-span-2 xl:col-start-2 xl:col-span-1 prose">
         <h1 className="text-center">Your Notes</h1>
-        <pre>search UI goes here later</pre>
+        <div className="grid mt-8">
+          <form className="grid justify-self-center w-5/6">
+            <input
+              type="text"
+              placeholder="Search..."
+              disabled={
+                !(searchParams.searchContent && searchParams.searchTags)
+              }
+              className="input input-bordered w-full justify-self-center"
+            />
+            <div className="flex flex-row flex-wrap justify-evenly gap-x-4 mt-2">
+              <label className="label">
+                Search content
+                <input type="checkbox" checked className="checkbox ml-2" />
+              </label>
+              <label className="label">
+                Search tags
+                <input type="checkbox" checked className="checkbox ml-2" />
+              </label>
+              <label className="label">
+                Include built-in cue notes
+                <input type="checkbox" checked className="checkbox ml-2" />
+              </label>
+            </div>
+          </form>
+        </div>
         <div className="divider"></div>
         {notes.map((note) => (
           <div key={note.id}>
