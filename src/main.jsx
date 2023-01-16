@@ -7,9 +7,12 @@ import ErrorPage from "./ErrorPage";
 import Lander from "./Lander";
 import About from "./About";
 import Mokkogen from "./Mokkogen";
-import ManageNotes from './ManageNotes'
-import ManageMokkos from './ManageMokkos'
-import ManageSettings from './ManageSettings'
+import ManageNotes from "./ManageNotes";
+import NewNote from "./NewNote";
+import NoteDetail from "./NoteDetail";
+import EditNote from "./EditNote";
+import ManageMokkos from "./ManageMokkos";
+import ManageSettings from "./ManageSettings";
 
 import "./main.css";
 
@@ -31,9 +34,24 @@ const router = createBrowserRouter([
         path: "mokkogen",
         element: <Mokkogen />,
       },
+
       {
         path: "manage/notes",
-        element: < ManageNotes/>,
+        children: [
+          { index: true, element: <ManageNotes /> },
+          {
+            path: "new",
+            element: <NewNote />,
+          },
+          {
+            path: ":noteId",
+            element: <NoteDetail />,
+          },
+          {
+            path: ":noteId/edit",
+            element: <EditNote />,
+          },
+        ],
       },
       {
         path: "manage/mokkos",
@@ -42,6 +60,10 @@ const router = createBrowserRouter([
       {
         path: "manage/settings",
         element: <ManageSettings />,
+      },
+      {
+        path: "*",
+        element: <Lander />,
       },
     ],
   },
