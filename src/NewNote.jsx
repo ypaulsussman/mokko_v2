@@ -1,8 +1,15 @@
+import { useState } from "react";
+import RichTextEditor from "./components/RichTextEditor";
+
 function NewNote() {
+const [editorText, setEditorText] = useState('Text goes here...')
   return (
-    <>
-      <p>wow I'm gonna be a form for creating new notes soon!</p>
-    </>
+    <div className="grid">
+      <div className="justify-self-center prose">
+        <h1 className="text-center">New Note</h1>
+        <RichTextEditor setEditorText={setEditorText}/>
+      </div>
+    </div>
   );
 }
 
