@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { db } from "./data/db";
 import SanitizedHTML from "./components/SanitizedHTML";
 
@@ -150,17 +151,24 @@ function ManageNotes() {
             </div>
           </form>
         </div>
-        
+
         {/* Notes List */}
 
         <div className="divider"></div>
         {notes.map((note) => (
           <div key={note.id}>
-            <SanitizedHTML content={note.content} />
+            {/* undo font-styling applied by `prose` class to link-text*/}
+            <Link to={`${note.id}`} className="no-underline font-normal">
+              <div className="card card-bordered shadow-xl">
+                <div className="card-body">
+                  <SanitizedHTML content={note.content} />
+                </div>
+              </div>
+            </Link>
             <div className="divider"></div>
           </div>
         ))}
-        
+
         {/* Paginator */}
 
         {totalNotePageCount > 1 && (
