@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { db } from "./data/db";
 import SanitizedHTML from "./components/SanitizedHTML";
+import { buildDetailData } from "./utils/noteDetailUtils";
 
 function NoteDetail() {
   const [note, setNote] = useState();
@@ -36,19 +37,7 @@ function NoteDetail() {
           </ul>
 
           <h2>Details:</h2>
-          {}
-
-          {/* 
-  "builtin_cue_membership": "",
-  
-  "cue_only": false,
-  
-  "next_occurrence": "",
-  "current_interval": 1,
-  
-  "use_no_cue": false,
-  "available_cue_types": ["notes"] 
-  */}
+          {buildDetailData(note)}
         </div>
       </div>
     );
