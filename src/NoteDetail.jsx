@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { db } from "./data/db";
 import SanitizedHTML from "./components/SanitizedHTML";
 import { buildDetailData } from "./utils/noteDetailUtils";
@@ -23,7 +23,14 @@ function NoteDetail() {
     return (
       <div className="grid">
         <div className="justify-self-center prose">
-          <h1 className="text-center">{`Note #${note.id}`}</h1>
+          <div className="grid grid-cols-3">
+            <div className="col-start-2 ">
+              <h1 className="text-center mb-0">{`Note #${note.id}`}</h1>
+            </div>
+            <Link to={"edit"} className="link block text-right">
+              Edit
+            </Link>
+          </div>
 
           <h2>Content:</h2>
           <SanitizedHTML content={note.content} />
