@@ -24,9 +24,10 @@ function NoteDetail() {
       <div className="grid">
         <div className="justify-self-center prose">
           <div className="grid grid-cols-3">
-            <div className="col-start-2 ">
-              <h1 className="text-center mb-0">{`Note #${note.id}`}</h1>
-            </div>
+            <Link to={"/"} className="link block text-left">
+              Delete
+            </Link>
+            <h1 className="text-center mb-0">{`Note #${note.id}`}</h1>
             <Link to={"edit"} className="link block text-right">
               Edit
             </Link>
