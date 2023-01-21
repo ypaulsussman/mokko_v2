@@ -10,16 +10,27 @@ function EditNote() {
   const navigate = useNavigate();
   const { noteId } = useParams();
 
+  const handleContentUpdate = (newText) => {
+    // NB future Y: like the similar comment below, the usage of callback-function-as-argument-to-setFoo-rather-than-fooValue-itself stems from a bizarre bug in which the other keys inside `note` are ignored (and thus reset) on `setNote` invocation here-but-only-here -- presumably a result of some stale cache of the value being consumed by the RTE, perhaps from interactions with its imperative-DOM-behaviors?
+    setNote((note) => ({ ...note, content: newText }));
+  };
+
   const handleAddTag = (tagToAdd, setTagToAdd) => {
     if (tagToAdd) {
       setNote((note) => ({ ...note, tags: [...note.tags, tagToAdd] }));
-      setPreexistingTags(preexistingTags.filter((tag) => tag !== tagToAdd));
+      setPreexistingTags((preexistingTags) =>
+        preexistingTags.filter((tag) => tag !== tagToAdd)
+      );
       setTagToAdd("");
     }
   };
 
-  const handleContentUpdate = (newText) => {
-    setNote((note) => ({ ...note, content: newText }));
+  const handleRemoveTag = (tagToRemove) => {
+    setNote((note) => ({
+      ...note,
+      tags: note.tags.filter((tag) => tag !== tagToRemove),
+    }));
+    setPreexistingTags((preexistingTags) => [...preexistingTags, tagToRemove]);
   };
 
   const saveNote = async (e) => {
@@ -66,6 +77,7 @@ function EditNote() {
               currentTags={note.tags}
               preexistingTags={preexistingTags}
               handleAddTag={handleAddTag}
+              handleRemoveTag={handleRemoveTag}
             />
 
             <h2>Details:</h2>

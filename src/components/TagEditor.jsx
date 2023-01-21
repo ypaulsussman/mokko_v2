@@ -1,27 +1,37 @@
 import React, { useState } from "react";
 
-function TagEditor({ currentTags, preexistingTags, handleAddTag }) {
+function TagEditor({
+  currentTags,
+  preexistingTags,
+  handleAddTag,
+  handleRemoveTag,
+}) {
   const [tagToAdd, setTagToAdd] = useState("");
+
   return (
     <>
-      {currentTags.map((tag) => (
-        <div key={tag} className="badge badge-lg gap-2">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            className="inline-block w-4 h-4 stroke-current"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M6 18L18 6M6 6l12 12"
-            ></path>
-          </svg>
-          {tag}
-        </div>
-      ))}
+      <div className="mb-4">
+        {currentTags.map((tag) => (
+          <div key={tag} className="badge badge-lg gap-2 mr-4">
+            <button onClick={() => handleRemoveTag(tag)}>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                className="inline-block w-4 h-4 stroke-current"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M6 18L18 6M6 6l12 12"
+                ></path>
+              </svg>
+              {tag}
+            </button>
+          </div>
+        ))}
+      </div>
 
       <div className="form-control">
         <div className="input-group">
