@@ -9,6 +9,15 @@ function EditNote() {
   const navigate = useNavigate();
   const { noteId } = useParams();
 
+  const handleAddTag = () => {
+    const tagToAdd = document.getElementById("tagToAdd").value;
+    if (tagToAdd) {
+      setNote({ ...note, tags: [...note.tags, tagToAdd] });
+      setPreexistingTags(preexistingTags.filter((tag) => tag !== tagToAdd));
+      document.getElementById("tagToAdd").value = "";
+    }
+  };
+
   const saveNote = async (e) => {
     e.preventDefault();
     await db.notes.update(Number(noteId), note);
@@ -20,12 +29,14 @@ function EditNote() {
       const noteData = await db.notes.get(Number(noteId));
 
       const allTags = await db.notes.orderBy("tags").keys((tags) => tags);
-      const uniqueUserTags = Array.from(new Set(allTags)).filter(
-        (tag) => tag != "builtin_cue"
+      const uniqueTags = Array.from(new Set(allTags));
+      const unwantedTags = [...noteData.tags, "builtin_cue"];
+      const availableTags = uniqueTags.filter(
+        (tag) => !unwantedTags.includes(tag)
       );
 
       setNote(noteData);
-      setPreexistingTags(uniqueUserTags);
+      setPreexistingTags(availableTags);
     }
 
     getFormData(noteId);
@@ -62,6 +73,43 @@ function EditNote() {
                 {tag}
               </div>
             ))}
+            <div className="form-control">
+              <div className="input-group">
+                <input
+                  type="text"
+                  list="tags"
+                  id="tagToAdd"
+                  placeholder="Enter tag to add"
+                  className="input input-bordered"
+                />
+                <button
+                  type="button"
+                  onClick={handleAddTag}
+                  aria-label="Add tag"
+                  className="btn btn-square"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M11,-1 V22 M-1,11 H22"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <datalist id="tags">
+              {preexistingTags.map((tags) => (
+                <option key={tags} value={tags} />
+              ))}
+            </datalist>
 
             <h2>Details:</h2>
             <div>(foo, bar, baz, other widgets go here later)</div>

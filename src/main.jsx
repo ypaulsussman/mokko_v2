@@ -34,7 +34,6 @@ const router = createBrowserRouter([
         path: "mokkogen",
         element: <Mokkogen />,
       },
-
       {
         path: "manage/notes",
         children: [
