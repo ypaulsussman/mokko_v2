@@ -130,20 +130,20 @@ const MenuBar = ({ editor }) => {
   );
 };
 
-function RichTextEditor({ note, setNote }) {
+function RichTextEditor({ currentText, handleContentUpdate }) {
   const editor = useEditor({
     extensions: [StarterKit],
-    content: note.content ? note.content : "",
+    content: currentText ? currentText : "",
     onUpdate: ({ editor }) => {
-      const currentText = editor.getHTML();
-      setNote({ ...note, content: currentText });
+      const newText = editor.getHTML();
+      handleContentUpdate(newText);
     },
   });
 
   return (
     <div>
       <MenuBar editor={editor} />
-      <EditorContent editor={editor} className="prose min-h-[25%]" />
+      <EditorContent editor={editor} className="prose" />
     </div>
   );
 }
