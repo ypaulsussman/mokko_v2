@@ -10,6 +10,25 @@ function EditNote() {
   const navigate = useNavigate();
   const { noteId } = useParams();
 
+  // Initial dataload
+  useEffect(() => {
+    async function getFormData(noteId) {
+      const noteData = await db.notes.get(Number(noteId));
+      const unaddableTags = [...noteData.tags, "builtin_cue"];
+
+      const allTags = await db.notes.orderBy("tags").keys((tags) => tags);
+      const uniqueTags = Array.from(new Set(allTags));
+      const availableTags = uniqueTags.filter(
+        (tag) => !unaddableTags.includes(tag)
+      );
+
+      setNote(noteData);
+      setPreexistingTags(availableTags);
+    }
+
+    getFormData(noteId);
+  }, [noteId]);
+
   const handleContentUpdate = (newText) => {
     // NB future Y: like the similar comment below, the usage of callback-function-as-argument-to-setFoo-rather-than-fooValue-itself stems from a bizarre bug in which the other keys inside `note` are ignored (and thus reset) on `setNote` invocation here-but-only-here -- presumably a result of some stale cache of the value being consumed by the RTE, perhaps from interactions with its imperative-DOM-behaviors?
     setNote((note) => ({ ...note, content: newText }));
@@ -33,29 +52,29 @@ function EditNote() {
     setPreexistingTags((preexistingTags) => [...preexistingTags, tagToRemove]);
   };
 
-  const saveNote = async (e) => {
-    e.preventDefault();
-    await db.notes.update(Number(noteId), note);
-    navigate(`/manage/notes/${noteId}`);
+  const handleDetailChange = (e) => {
+    setNote((note) => ({
+      ...note,
+      [e.target.name]: e.target.value,
+    }));
   };
 
-  useEffect(() => {
-    async function getFormData(noteId) {
-      const noteData = await db.notes.get(Number(noteId));
-      const unaddableTags = [...noteData.tags, "builtin_cue"];
+  const saveNote = async (e) => {
+    e.preventDefault();
 
-      const allTags = await db.notes.orderBy("tags").keys((tags) => tags);
-      const uniqueTags = Array.from(new Set(allTags));
-      const availableTags = uniqueTags.filter(
-        (tag) => !unaddableTags.includes(tag)
-      );
+    const tz_agnostic_next_occurrence = new Date(
+      `${note.next_occurrence}T00:00:00`
+    )
+      .toISOString()
+      .slice(0, 10);
 
-      setNote(noteData);
-      setPreexistingTags(availableTags);
-    }
+    await db.notes.update(Number(noteId), {
+      ...note,
+      next_occurrence: tz_agnostic_next_occurrence,
+    });
 
-    getFormData(noteId);
-  }, [noteId]);
+    navigate(`/manage/notes/${noteId}`);
+  };
 
   if (!note) {
     return <></>;
@@ -81,7 +100,26 @@ function EditNote() {
             />
 
             <h2>Details:</h2>
-            <div>(foo, bar, baz, other widgets go here later)</div>
+            <div className="form-control w-full max-w-xs">
+              <label className="label">
+                <span className="label-text">
+                  Next surface this note for mokkogen on:
+                </span>
+              </label>
+              <input
+                type="text"
+                name="next_occurrence"
+                value={note.next_occurrence ? note.next_occurrence : ""}
+                onChange={handleDetailChange}
+                className="input input-bordered w-full max-w-xs"
+              />
+              <label className="label">
+                <span className="label-text-alt">
+                  Please use YYYY-MM-DD format, or keep empty to use solely as a
+                  cue for other notes.
+                </span>
+              </label>
+            </div>
 
             <div className="flex justify-end my-8">
               <button

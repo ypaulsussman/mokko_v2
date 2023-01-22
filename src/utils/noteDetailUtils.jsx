@@ -42,9 +42,9 @@ function buildScheduleData(next_occurrence, current_interval) {
     return (
       <>
         <p>
-          This note hasn't surfaced yet! You can encounter it sooner, if you
-          desire, by changing the number of notes you interact with daily inside
-          settings.
+          This note hasn't been used to generate a mokko yet! To encounter it
+          sooner, click "Edit" above and change its "next surface this note"
+          value.
         </p>
       </>
     );
@@ -53,10 +53,11 @@ function buildScheduleData(next_occurrence, current_interval) {
       <>
         <p>
           This note is next scheduled to be used for generating a mokko on{" "}
-          {next_occurrence.toISOString()}.
+          {next_occurrence}.
         </p>
         <p>
-          (It's currently programmed to surface every {current_interval} days.)
+          (It's currently programmed to surface every {current_interval} day
+          {current_interval > 1 ? "s" : ""}.)
         </p>
       </>
     );
@@ -89,7 +90,8 @@ function buildCueData(use_no_cue, available_cue_types) {
             <p className="mb-12">
               Any time this note surfaces for mokko generation, its partner
               cue-note will be chosen randomly from the following decks:{" "}
-              {available_cue_types.map((cue) => CUE_TYPES[cue].name).join(", ")}.
+              {available_cue_types.map((cue) => CUE_TYPES[cue].name).join(", ")}
+              .
             </p>
           </>
         )}
