@@ -62,11 +62,11 @@ function EditNote() {
   const saveNote = async (e) => {
     e.preventDefault();
 
-    const tz_agnostic_next_occurrence = new Date(
+    const tz_agnostic_next_occurrence = note.next_occurrence ? new Date(
       `${note.next_occurrence}T00:00:00`
     )
       .toISOString()
-      .slice(0, 10);
+      .slice(0, 10) : '';
 
     await db.notes.update(Number(noteId), {
       ...note,

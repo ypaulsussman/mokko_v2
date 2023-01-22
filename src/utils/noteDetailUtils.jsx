@@ -42,9 +42,8 @@ function buildScheduleData(next_occurrence, current_interval) {
     return (
       <>
         <p>
-          This note hasn't been used to generate a mokko yet! To encounter it
-          sooner, click "Edit" above and change its "next surface this note"
-          value.
+          This note isn't scheduled to generate a mokko! To changed that, click
+          "Edit" above and alter its "next surface this note" value.
         </p>
       </>
     );
