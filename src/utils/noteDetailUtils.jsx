@@ -1,9 +1,4 @@
-const CUE_TYPES = {
-  oblique: { name: "Oblique Strategies", path: "Oblique_Strategies" },
-  scamper: { name: "SCAMPER", path: "SCAMPER" },
-  triz: { name: "TRIZ", path: "TRIZ" },
-  notes: { name: "collected notes", path: null },
-};
+import { CUE_TYPES } from "../data/constants";
 
 function getBuiltInCueString(membership) {
   return (
@@ -17,22 +12,8 @@ function getBuiltInCueString(membership) {
       </p>
       <p>
         By default, no notes that you add will collide with these builtins; you
-        can change that by editing a note's available cue types (or enabling one
-        globally in settings.)
+        can change that by editing a note's available cue types.
       </p>
-    </>
-  );
-}
-
-function getCueOnlyString() {
-  return (
-    <>
-      <p>
-        This note is currently selected to function solely as a cue: it will
-        never surface on its own, but only when randomly selected to "collide"
-        with a base note during mokko generation.
-      </p>
-      <p>You can change this by toggling its "Cue Only" setting.</p>
     </>
   );
 }
@@ -52,26 +33,22 @@ function buildScheduleData(next_occurrence, current_interval) {
       <>
         <p>
           This note is next scheduled to be used for generating a mokko on{" "}
-          {next_occurrence}.
-        </p>
-        <p>
-          (It's currently programmed to surface every {current_interval} day
-          {current_interval > 1 ? "s" : ""}.)
+          {next_occurrence}; after that, it's programmed to surface every{" "}
+          {current_interval} day
+          {current_interval > 1 ? "s" : ""}.
         </p>
       </>
     );
   }
 }
 
-function buildCueData(use_no_cue, available_cue_types) {
-  if (use_no_cue) {
+function buildCueData(suspended, available_cue_types) {
+  if (suspended) {
     return (
       <>
         <p>
-          This note currently has cues toggled off; when it surfaces, you'll be
-          prompted for a mokko (in this case, sans collision, really more of a
-          traditional reflection or rumination) without another note as
-          secondary input.
+          This note is currently suspended; it's still visible and editable, but
+          will never surface for mokkogen and will never be selected as a cue.
         </p>
       </>
     );
@@ -81,8 +58,10 @@ function buildCueData(use_no_cue, available_cue_types) {
         {available_cue_types.length === 1 ? (
           <p className="mb-12">
             Any time this note surfaces for mokko generation, its partner
-            cue-note will be chosen randomly from the{" "}
-            {CUE_TYPES[available_cue_types[0]].name} deck.
+            cue-note will be chosen randomly from{" "}
+            {available_cue_types[0] === "notes"
+              ? "the pool of all notes that you've added."
+              : `the ${CUE_TYPES[available_cue_types[0]].name} deck.`}
           </p>
         ) : (
           <>
@@ -104,19 +83,16 @@ export function buildDetailData({
   cue_only,
   next_occurrence,
   current_interval,
-  use_no_cue,
+  suspended,
   available_cue_types,
 }) {
   if (builtin_cue_membership) {
     return getBuiltInCueString(builtin_cue_membership);
   }
-  if (cue_only) {
-    return getCueOnlyString();
-  }
   return (
     <>
       {buildScheduleData(next_occurrence, current_interval)}
-      {buildCueData(use_no_cue, available_cue_types)}
+      {buildCueData(suspended, available_cue_types)}
     </>
   );
 }

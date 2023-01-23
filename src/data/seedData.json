@@ -6,8 +6,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "scamper",
       "available_cue_types": []
     },
@@ -17,8 +16,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "scamper",
       "available_cue_types": []
     },
@@ -28,8 +26,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "scamper",
       "available_cue_types": []
     },
@@ -39,8 +36,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "scamper",
       "available_cue_types": []
     },
@@ -50,8 +46,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "scamper",
       "available_cue_types": []
     },
@@ -61,8 +56,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "scamper",
       "available_cue_types": []
     },
@@ -72,8 +66,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "scamper",
       "available_cue_types": []
     },
@@ -83,8 +76,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "triz",
       "available_cue_types": []
     },
@@ -94,8 +86,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "triz",
       "available_cue_types": []
     },
@@ -105,8 +96,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "triz",
       "available_cue_types": []
     },
@@ -116,8 +106,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "triz",
       "available_cue_types": []
     },
@@ -127,8 +116,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "triz",
       "available_cue_types": []
     },
@@ -138,8 +126,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "triz",
       "available_cue_types": []
     },
@@ -149,8 +136,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "triz",
       "available_cue_types": []
     },
@@ -160,8 +146,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "triz",
       "available_cue_types": []
     },
@@ -171,8 +156,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "triz",
       "available_cue_types": []
     },
@@ -182,8 +166,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "triz",
       "available_cue_types": []
     },
@@ -193,8 +176,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "triz",
       "available_cue_types": []
     },
@@ -204,8 +186,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "triz",
       "available_cue_types": []
     },
@@ -215,8 +196,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "triz",
       "available_cue_types": []
     },
@@ -226,8 +206,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "triz",
       "available_cue_types": []
     },
@@ -237,8 +216,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "triz",
       "available_cue_types": []
     },
@@ -248,8 +226,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "triz",
       "available_cue_types": []
     },
@@ -259,8 +236,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "triz",
       "available_cue_types": []
     },
@@ -270,8 +246,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "triz",
       "available_cue_types": []
     },
@@ -281,8 +256,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "triz",
       "available_cue_types": []
     },
@@ -292,8 +266,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "triz",
       "available_cue_types": []
     },
@@ -303,8 +276,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "triz",
       "available_cue_types": []
     },
@@ -314,8 +286,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "triz",
       "available_cue_types": []
     },
@@ -325,8 +296,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "triz",
       "available_cue_types": []
     },
@@ -336,8 +306,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "triz",
       "available_cue_types": []
     },
@@ -347,8 +316,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "triz",
       "available_cue_types": []
     },
@@ -358,8 +326,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "triz",
       "available_cue_types": []
     },
@@ -369,8 +336,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "triz",
       "available_cue_types": []
     },
@@ -380,8 +346,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "triz",
       "available_cue_types": []
     },
@@ -391,8 +356,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "triz",
       "available_cue_types": []
     },
@@ -402,8 +366,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "triz",
       "available_cue_types": []
     },
@@ -413,8 +376,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "triz",
       "available_cue_types": []
     },
@@ -424,8 +386,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "triz",
       "available_cue_types": []
     },
@@ -435,8 +396,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "triz",
       "available_cue_types": []
     },
@@ -446,8 +406,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "triz",
       "available_cue_types": []
     },
@@ -457,8 +416,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "triz",
       "available_cue_types": []
     },
@@ -468,8 +426,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "triz",
       "available_cue_types": []
     },
@@ -479,8 +436,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "triz",
       "available_cue_types": []
     },
@@ -490,8 +446,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "triz",
       "available_cue_types": []
     },
@@ -501,8 +456,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "triz",
       "available_cue_types": []
     },
@@ -512,8 +466,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "triz",
       "available_cue_types": []
     },
@@ -523,8 +476,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -534,8 +486,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -545,8 +496,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -556,8 +506,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -567,8 +516,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -578,8 +526,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -589,8 +536,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -600,8 +546,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -611,8 +556,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -622,8 +566,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -633,8 +576,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -644,8 +586,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -655,8 +596,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -666,8 +606,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -677,8 +616,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -688,8 +626,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -699,8 +636,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -710,8 +646,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -721,8 +656,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -732,8 +666,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -743,8 +676,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -754,8 +686,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -765,8 +696,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -776,8 +706,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -787,8 +716,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -798,8 +726,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -809,8 +736,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -820,8 +746,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -831,8 +756,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -842,8 +766,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -853,8 +776,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -864,8 +786,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -875,8 +796,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -886,8 +806,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -897,8 +816,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -908,8 +826,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -919,8 +836,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -930,8 +846,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -941,8 +856,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -952,8 +866,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -963,8 +876,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -974,8 +886,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -985,8 +896,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -996,8 +906,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -1007,8 +916,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -1018,8 +926,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -1029,8 +936,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -1040,8 +946,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -1051,8 +956,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -1062,8 +966,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -1073,8 +976,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -1084,8 +986,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -1095,8 +996,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -1106,8 +1006,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -1117,8 +1016,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -1128,8 +1026,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -1139,8 +1036,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -1150,8 +1046,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -1161,8 +1056,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -1172,8 +1066,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -1183,8 +1076,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -1194,8 +1086,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -1205,8 +1096,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -1216,8 +1106,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -1227,8 +1116,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -1238,8 +1126,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -1249,8 +1136,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -1260,8 +1146,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -1271,8 +1156,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -1282,8 +1166,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -1293,8 +1176,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -1304,8 +1186,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -1315,8 +1196,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -1326,8 +1206,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -1337,8 +1216,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -1348,8 +1226,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -1359,8 +1236,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -1370,8 +1246,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -1381,8 +1256,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -1392,8 +1266,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -1403,8 +1276,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -1414,8 +1286,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -1425,8 +1296,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -1436,8 +1306,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -1447,8 +1316,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -1458,8 +1326,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -1469,8 +1336,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -1480,8 +1346,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -1491,8 +1356,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -1502,8 +1366,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -1513,8 +1376,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -1524,8 +1386,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -1535,8 +1396,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -1546,8 +1406,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -1557,8 +1416,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -1568,8 +1426,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -1579,8 +1436,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -1590,8 +1446,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -1601,8 +1456,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -1612,8 +1466,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -1623,8 +1476,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -1634,8 +1486,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -1645,8 +1496,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -1656,8 +1506,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -1667,8 +1516,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -1678,8 +1526,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -1689,8 +1536,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -1700,8 +1546,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -1711,8 +1556,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -1722,8 +1566,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -1733,8 +1576,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -1744,8 +1586,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -1755,8 +1596,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -1766,8 +1606,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -1777,8 +1616,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -1788,8 +1626,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -1799,8 +1636,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["builtin_cue"],
-      "use_no_cue": true,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "oblique",
       "available_cue_types": []
     },
@@ -1810,8 +1646,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["paul-graham", "what-i-worked-on"],
-      "use_no_cue": false,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "",
       "available_cue_types": ["notes"]
     },
@@ -1821,8 +1656,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["steven-pinker", "words-and-rules", "linguistics"],
-      "use_no_cue": false,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "",
       "available_cue_types": ["notes"]
     },
@@ -1832,8 +1666,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["crash-course-study-skills"],
-      "use_no_cue": false,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "",
       "available_cue_types": ["notes"]
     },
@@ -1843,8 +1676,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["through-the-language-glass", "linguistics"],
-      "use_no_cue": false,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "",
       "available_cue_types": ["notes"]
     },
@@ -1854,8 +1686,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["educause", "seven-things-you-should-know-about", "edtech"],
-      "use_no_cue": false,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "",
       "available_cue_types": ["notes"]
     },
@@ -1865,8 +1696,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["great-courses", "practicing-mindfulness"],
-      "use_no_cue": false,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "",
       "available_cue_types": ["notes"]
     },
@@ -1876,8 +1706,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["hello-startup", "yevgeniy-brikman", "ux"],
-      "use_no_cue": false,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "",
       "available_cue_types": ["notes"]
     },
@@ -1887,8 +1716,7 @@
       "current_interval": 1,
       "next_occurrence": "",
       "tags": ["great-courses", "practicing-mindfulness"],
-      "use_no_cue": false,
-      "archived": false,
+      "suspended": false,
       "builtin_cue_membership": "",
       "available_cue_types": ["notes"]
     }
@@ -1941,8 +1769,7 @@
     "default_note_options": {
       "current interval": 1,
       "tags": [],
-      "use_no_cue": false,
-      "archived": false,
+      "suspended": false,
       "available_cue_types": ["notes"]
     }
   }

@@ -3,6 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { db } from "./data/db";
 import RichTextEditor from "./components/RichTextEditor";
 import TagEditor from "./components/TagEditor";
+import DetailsEditor from "./components/DetailsEditor";
 
 function EditNote() {
   const [note, setNote] = useState();
@@ -52,21 +53,41 @@ function EditNote() {
     setPreexistingTags((preexistingTags) => [...preexistingTags, tagToRemove]);
   };
 
-  const handleDetailChange = (e) => {
+  const handleNextOccurrenceChange = ({ target }) => {
     setNote((note) => ({
       ...note,
-      [e.target.name]: e.target.value,
+      next_occurrence: target.value,
+    }));
+  };
+
+  const handleSuspendedChange = ({ target }) => {
+    setNote((note) => ({
+      ...note,
+      suspended: target.checked,
+    }));
+  };
+
+  const handleAvailableCuesChange = ({ target }) => {
+    let newValue;
+    if (note.available_cue_types.includes(target.value)) {
+      newValue = note.available_cue_types.filter(
+        (cueType) => cueType !== target.value
+      );
+    } else {
+      newValue = [...note.available_cue_types, target.value];
+    }
+    setNote((note) => ({
+      ...note,
+      available_cue_types: newValue,
     }));
   };
 
   const saveNote = async (e) => {
     e.preventDefault();
 
-    const tz_agnostic_next_occurrence = note.next_occurrence ? new Date(
-      `${note.next_occurrence}T00:00:00`
-    )
-      .toISOString()
-      .slice(0, 10) : '';
+    const tz_agnostic_next_occurrence = note.next_occurrence
+      ? new Date(`${note.next_occurrence}T00:00:00`).toISOString().slice(0, 10)
+      : "";
 
     await db.notes.update(Number(noteId), {
       ...note,
@@ -100,26 +121,12 @@ function EditNote() {
             />
 
             <h2>Details:</h2>
-            <div className="form-control w-full max-w-xs">
-              <label className="label">
-                <span className="label-text">
-                  Next surface this note for mokkogen on:
-                </span>
-              </label>
-              <input
-                type="text"
-                name="next_occurrence"
-                value={note.next_occurrence ? note.next_occurrence : ""}
-                onChange={handleDetailChange}
-                className="input input-bordered w-full max-w-xs"
-              />
-              <label className="label">
-                <span className="label-text-alt">
-                  Please use YYYY-MM-DD format, or keep empty to use solely as a
-                  cue for other notes.
-                </span>
-              </label>
-            </div>
+            <DetailsEditor
+              note={note}
+              handleNextOccurrenceChange={handleNextOccurrenceChange}
+              handleSuspendedChange={handleSuspendedChange}
+              handleAvailableCuesChange={handleAvailableCuesChange}
+            />
 
             <div className="flex justify-end my-8">
               <button

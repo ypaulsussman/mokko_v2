@@ -21,7 +21,7 @@ function NoteDetail() {
     return <></>;
   } else {
     return (
-      <div className="grid">
+      <div className="grid mb-12">
         <div className="justify-self-center prose">
           <div className="grid grid-cols-3">
             <Link to={"/"} className="link block text-left">
