@@ -6,126 +6,205 @@ const MenuBar = ({ editor }) => {
     return null;
   }
 
+  const buildClassName = (
+    activeSignal,
+    activeSignalOptions,
+    overrides = []
+  ) => {
+    return `btn btn-square btn-sm mr-2 mb-2 ${
+      editor.isActive(activeSignal, activeSignalOptions)
+        ? "is-active"
+        : "btn-outline"
+    } ${overrides.join(" ")}`;
+  };
+
   return (
     <>
-      <button
-        onClick={() => editor.chain().focus().toggleBold().run()}
-        disabled={!editor.can().chain().focus().toggleBold().run()}
-        className={editor.isActive("bold") ? "is-active" : ""}
-      >
-        bold
-      </button>
-      <button
-        onClick={() => editor.chain().focus().toggleItalic().run()}
-        disabled={!editor.can().chain().focus().toggleItalic().run()}
-        className={editor.isActive("italic") ? "is-active" : ""}
-      >
-        italic
-      </button>
-      <button
-        onClick={() => editor.chain().focus().toggleStrike().run()}
-        disabled={!editor.can().chain().focus().toggleStrike().run()}
-        className={editor.isActive("strike") ? "is-active" : ""}
-      >
-        strike
-      </button>
-      <button
-        onClick={() => editor.chain().focus().toggleCode().run()}
-        disabled={!editor.can().chain().focus().toggleCode().run()}
-        className={editor.isActive("code") ? "is-active" : ""}
-      >
-        code
-      </button>
-      <button onClick={() => editor.chain().focus().unsetAllMarks().run()}>
-        clear marks
-      </button>
-      <button onClick={() => editor.chain().focus().clearNodes().run()}>
-        clear nodes
-      </button>
-      <button
-        onClick={() => editor.chain().focus().setParagraph().run()}
-        className={editor.isActive("paragraph") ? "is-active" : ""}
-      >
-        paragraph
-      </button>
-      <button
-        onClick={() => editor.chain().focus().toggleHeading({ level: 1 }).run()}
-        className={editor.isActive("heading", { level: 1 }) ? "is-active" : ""}
-      >
-        h1
-      </button>
-      <button
-        onClick={() => editor.chain().focus().toggleHeading({ level: 2 }).run()}
-        className={editor.isActive("heading", { level: 2 }) ? "is-active" : ""}
-      >
-        h2
-      </button>
-      <button
-        onClick={() => editor.chain().focus().toggleHeading({ level: 3 }).run()}
-        className={editor.isActive("heading", { level: 3 }) ? "is-active" : ""}
-      >
-        h3
-      </button>
-      <button
-        onClick={() => editor.chain().focus().toggleHeading({ level: 4 }).run()}
-        className={editor.isActive("heading", { level: 4 }) ? "is-active" : ""}
-      >
-        h4
-      </button>
-      <button
-        onClick={() => editor.chain().focus().toggleHeading({ level: 5 }).run()}
-        className={editor.isActive("heading", { level: 5 }) ? "is-active" : ""}
-      >
-        h5
-      </button>
-      <button
-        onClick={() => editor.chain().focus().toggleHeading({ level: 6 }).run()}
-        className={editor.isActive("heading", { level: 6 }) ? "is-active" : ""}
-      >
-        h6
-      </button>
-      <button
-        onClick={() => editor.chain().focus().toggleBulletList().run()}
-        className={editor.isActive("bulletList") ? "is-active" : ""}
-      >
-        bullet list
-      </button>
-      <button
-        onClick={() => editor.chain().focus().toggleOrderedList().run()}
-        className={editor.isActive("orderedList") ? "is-active" : ""}
-      >
-        ordered list
-      </button>
-      <button
-        onClick={() => editor.chain().focus().toggleCodeBlock().run()}
-        className={editor.isActive("codeBlock") ? "is-active" : ""}
-      >
-        code block
-      </button>
-      <button
-        onClick={() => editor.chain().focus().toggleBlockquote().run()}
-        className={editor.isActive("blockquote") ? "is-active" : ""}
-      >
-        blockquote
-      </button>
-      <button onClick={() => editor.chain().focus().setHorizontalRule().run()}>
-        horizontal rule
-      </button>
-      <button onClick={() => editor.chain().focus().setHardBreak().run()}>
-        hard break
-      </button>
-      <button
-        onClick={() => editor.chain().focus().undo().run()}
-        disabled={!editor.can().chain().focus().undo().run()}
-      >
-        undo
-      </button>
-      <button
-        onClick={() => editor.chain().focus().redo().run()}
-        disabled={!editor.can().chain().focus().redo().run()}
-      >
-        redo
-      </button>
+      <div className="tooltip" data-tip="Bold">
+        <button
+          onClick={() => editor.chain().focus().toggleBold().run()}
+          disabled={!editor.can().chain().focus().toggleBold().run()}
+          className={buildClassName("bold")}
+        >
+          bold
+        </button>
+      </div>
+      <div className="tooltip" data-tip="Italic">
+        <button
+          onClick={() => editor.chain().focus().toggleItalic().run()}
+          disabled={!editor.can().chain().focus().toggleItalic().run()}
+          className={buildClassName("italic")}
+        >
+          italic
+        </button>
+      </div>
+      <div className="tooltip" data-tip="Strikethrough">
+        <button
+          onClick={() => editor.chain().focus().toggleStrike().run()}
+          disabled={!editor.can().chain().focus().toggleStrike().run()}
+          className={buildClassName("strike")}
+        >
+          strike
+        </button>
+      </div>
+      <div className="tooltip" data-tip="Monospace">
+        <button
+          onClick={() => editor.chain().focus().toggleCode().run()}
+          disabled={!editor.can().chain().focus().toggleCode().run()}
+          className={buildClassName("code")}
+        >
+          code
+        </button>
+      </div>
+      <div className="tooltip" data-tip="Paragraph">
+        <button
+          onClick={() => editor.chain().focus().setParagraph().run()}
+          className={buildClassName("paragraph")}
+        >
+          para
+        </button>
+      </div>
+      <div className="tooltip" data-tip="Heading 1">
+        <button
+          onClick={() =>
+            editor.chain().focus().toggleHeading({ level: 1 }).run()
+          }
+          className={buildClassName("heading", { level: 1 })}
+        >
+          h1
+        </button>
+      </div>
+      <div className="tooltip" data-tip="Heading 2">
+        <button
+          onClick={() =>
+            editor.chain().focus().toggleHeading({ level: 2 }).run()
+          }
+          className={buildClassName("heading", { level: 2 })}
+        >
+          h2
+        </button>
+      </div>
+      <div className="tooltip" data-tip="Heading 3">
+        <button
+          onClick={() =>
+            editor.chain().focus().toggleHeading({ level: 3 }).run()
+          }
+          className={buildClassName("heading", { level: 3 })}
+        >
+          h3
+        </button>
+      </div>
+      <div className="tooltip" data-tip="Heading 4">
+        <button
+          onClick={() =>
+            editor.chain().focus().toggleHeading({ level: 4 }).run()
+          }
+          className={buildClassName("heading", { level: 4 })}
+        >
+          h4
+        </button>
+      </div>
+      <div className="tooltip" data-tip="Heading 5">
+        <button
+          onClick={() =>
+            editor.chain().focus().toggleHeading({ level: 5 }).run()
+          }
+          className={buildClassName("heading", { level: 5 })}
+        >
+          h5
+        </button>
+      </div>
+      <div className="tooltip" data-tip="Heading 6">
+        <button
+          onClick={() =>
+            editor.chain().focus().toggleHeading({ level: 6 }).run()
+          }
+          className={buildClassName("heading", { level: 6 })}
+        >
+          h6
+        </button>
+      </div>
+      <div className="tooltip" data-tip="Bullet List">
+        <button
+          onClick={() => editor.chain().focus().toggleBulletList().run()}
+          className={buildClassName("bulletList")}
+        >
+          ul
+        </button>
+      </div>
+      <div className="tooltip" data-tip="Numbered List">
+        <button
+          onClick={() => editor.chain().focus().toggleOrderedList().run()}
+          className={buildClassName("orderedList")}
+        >
+          ol
+        </button>
+      </div>
+      <div className="tooltip" data-tip="Code Block">
+        <button
+          onClick={() => editor.chain().focus().toggleCodeBlock().run()}
+          className={buildClassName("codeBlock")}
+        >
+          pre
+        </button>
+      </div>
+      <div className="tooltip" data-tip="Blockquote">
+        <button
+          onClick={() => editor.chain().focus().toggleBlockquote().run()}
+          className={buildClassName("blockquote")}
+        >
+          bq
+        </button>
+      </div>
+      <div className="tooltip" data-tip="Horizontal Rule">
+        <button
+          onClick={() => editor.chain().focus().setHorizontalRule().run()}
+          className="btn btn-square btn-sm mr-2 mb-2 btn-outline"
+        >
+          hr
+        </button>
+      </div>
+      <div className="tooltip" data-tip="Line Break">
+        <button
+          onClick={() => editor.chain().focus().setHardBreak().run()}
+          className="btn btn-square btn-sm mr-2 mb-2 btn-outline"
+        >
+          br
+        </button>
+      </div>
+      <div className="tooltip" data-tip="Clear Formatting">
+        <button
+          onClick={() => {
+            editor.chain().focus().unsetAllMarks().run();
+            editor.chain().focus().clearNodes().run();
+          }}
+          className="btn btn-square btn-sm mr-2 mb-2 btn-outline"
+        >
+          clear
+        </button>
+      </div>
+      <div className="tooltip" data-tip="Undo">
+        <button
+          onClick={() => editor.chain().focus().undo().run()}
+          disabled={!editor.can().chain().focus().undo().run()}
+          className={`btn btn-square btn-sm mr-2 mb-2 btn-outline ${
+            !editor.can().chain().focus().undo().run() ? "btn-disabled" : ""
+          }`}
+        >
+          undo
+        </button>
+      </div>
+      <div className="tooltip" data-tip="Redo">
+        <button
+          onClick={() => editor.chain().focus().redo().run()}
+          disabled={!editor.can().chain().focus().redo().run()}
+          className={`btn btn-square btn-sm mr-2 mb-2 btn-outline ${
+            !editor.can().chain().focus().redo().run() ? "btn-disabled" : ""
+          }`}
+        >
+          redo
+        </button>
+      </div>
     </>
   );
 };

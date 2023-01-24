@@ -1,10 +1,9 @@
 import { Link } from "react-router-dom";
 
-function Navbar(params) {
+function Navbar() {
   return (
     <div className="navbar bg-base-100">
       <div className="flex-1">
-        {/* <a className="btn btn-ghost normal-case text-xl">daisyUI</a> */}
         <Link className="p-2 bg-base-100" to={`about`}>
           About
         </Link>
