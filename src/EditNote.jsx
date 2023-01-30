@@ -106,7 +106,18 @@ function EditNote() {
           <h1 className="text-center">{`Edit Note #${note.id}`}</h1>
           {/* NB future Y: you spent hours trying to figure out what HTML property of the <form> tag causes the entire page to rerender when hitting one of the tiptap buttons but _not_ when actually adding/removing text from the editor... smdh this is ugly af but at least doesn't totally break accessibility... :/ Consider getting to the bottom of this as a fun task for your next vacation lol? */}
           <div role="form" aria-label="Edit Note">
-            <h2>Content:</h2>
+            
+            <div className="flex justify-end">
+              <button
+                type="submit"
+                className="btn btn-outline"
+                onClick={saveNote}
+              >
+                Save Changes
+              </button>
+            </div>
+
+            <h2 className="mt-0">Content:</h2>
             <RichTextEditor
               currentText={note.content}
               handleContentUpdate={handleContentUpdate}
