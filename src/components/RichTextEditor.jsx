@@ -1,5 +1,28 @@
 import { EditorContent, useEditor } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faBold,
+  faItalic,
+  faStrikethrough,
+  faCode,
+  faParagraph,
+  fa1,
+  fa2,
+  fa3,
+  fa4,
+  fa5,
+  fa6,
+  faList,
+  faListOl,
+  faTerminal,
+  faQuoteLeft,
+  faGripLines,
+  faFileLines,
+  faTextSlash,
+  faRotateLeft,
+  faRotateRight,
+} from "@fortawesome/free-solid-svg-icons";
 
 const MenuBar = ({ editor }) => {
   if (!editor) {
@@ -25,8 +48,9 @@ const MenuBar = ({ editor }) => {
           onClick={() => editor.chain().focus().toggleBold().run()}
           disabled={!editor.can().chain().focus().toggleBold().run()}
           className={buildClassName("bold")}
+          aria-label="bold"
         >
-          bold
+          <FontAwesomeIcon icon={faBold} />
         </button>
       </div>
       <div className="tooltip" data-tip="Italic">
@@ -34,8 +58,9 @@ const MenuBar = ({ editor }) => {
           onClick={() => editor.chain().focus().toggleItalic().run()}
           disabled={!editor.can().chain().focus().toggleItalic().run()}
           className={buildClassName("italic")}
+          aria-label="italic"
         >
-          italic
+          <FontAwesomeIcon icon={faItalic} />
         </button>
       </div>
       <div className="tooltip" data-tip="Strikethrough">
@@ -43,8 +68,9 @@ const MenuBar = ({ editor }) => {
           onClick={() => editor.chain().focus().toggleStrike().run()}
           disabled={!editor.can().chain().focus().toggleStrike().run()}
           className={buildClassName("strike")}
+          aria-label="strikethrough"
         >
-          strike
+          <FontAwesomeIcon icon={faStrikethrough} />
         </button>
       </div>
       <div className="tooltip" data-tip="Monospace">
@@ -52,16 +78,18 @@ const MenuBar = ({ editor }) => {
           onClick={() => editor.chain().focus().toggleCode().run()}
           disabled={!editor.can().chain().focus().toggleCode().run()}
           className={buildClassName("code")}
+          aria-label="Monospace"
         >
-          code
+          <FontAwesomeIcon icon={faCode} />
         </button>
       </div>
       <div className="tooltip" data-tip="Paragraph">
         <button
           onClick={() => editor.chain().focus().setParagraph().run()}
           className={buildClassName("paragraph")}
+          aria-label="Paragraph"
         >
-          para
+          <FontAwesomeIcon icon={faParagraph} />
         </button>
       </div>
       <div className="tooltip" data-tip="Heading 1">
@@ -70,8 +98,9 @@ const MenuBar = ({ editor }) => {
             editor.chain().focus().toggleHeading({ level: 1 }).run()
           }
           className={buildClassName("heading", { level: 1 })}
+          aria-label="Heading 1"
         >
-          h1
+          <FontAwesomeIcon icon={fa1} />
         </button>
       </div>
       <div className="tooltip" data-tip="Heading 2">
@@ -80,8 +109,9 @@ const MenuBar = ({ editor }) => {
             editor.chain().focus().toggleHeading({ level: 2 }).run()
           }
           className={buildClassName("heading", { level: 2 })}
+          aria-label="Heading 2"
         >
-          h2
+          <FontAwesomeIcon icon={fa2} />
         </button>
       </div>
       <div className="tooltip" data-tip="Heading 3">
@@ -90,8 +120,9 @@ const MenuBar = ({ editor }) => {
             editor.chain().focus().toggleHeading({ level: 3 }).run()
           }
           className={buildClassName("heading", { level: 3 })}
+          aria-label="Heading 3"
         >
-          h3
+          <FontAwesomeIcon icon={fa3} />
         </button>
       </div>
       <div className="tooltip" data-tip="Heading 4">
@@ -100,8 +131,9 @@ const MenuBar = ({ editor }) => {
             editor.chain().focus().toggleHeading({ level: 4 }).run()
           }
           className={buildClassName("heading", { level: 4 })}
+          aria-label="Heading 4"
         >
-          h4
+          <FontAwesomeIcon icon={fa4} />
         </button>
       </div>
       <div className="tooltip" data-tip="Heading 5">
@@ -110,8 +142,9 @@ const MenuBar = ({ editor }) => {
             editor.chain().focus().toggleHeading({ level: 5 }).run()
           }
           className={buildClassName("heading", { level: 5 })}
+          aria-label="Heading 5"
         >
-          h5
+          <FontAwesomeIcon icon={fa5} />
         </button>
       </div>
       <div className="tooltip" data-tip="Heading 6">
@@ -120,56 +153,63 @@ const MenuBar = ({ editor }) => {
             editor.chain().focus().toggleHeading({ level: 6 }).run()
           }
           className={buildClassName("heading", { level: 6 })}
+          aria-label="Heading 6"
         >
-          h6
+          <FontAwesomeIcon icon={fa6} />
         </button>
       </div>
       <div className="tooltip" data-tip="Bullet List">
         <button
           onClick={() => editor.chain().focus().toggleBulletList().run()}
           className={buildClassName("bulletList")}
+          aria-label="Bullet List"
         >
-          ul
+          <FontAwesomeIcon icon={faList} />
         </button>
       </div>
       <div className="tooltip" data-tip="Numbered List">
         <button
           onClick={() => editor.chain().focus().toggleOrderedList().run()}
           className={buildClassName("orderedList")}
+          aria-label="Numbered List"
         >
-          ol
+          <FontAwesomeIcon icon={faListOl} />
         </button>
       </div>
       <div className="tooltip" data-tip="Code Block">
         <button
           onClick={() => editor.chain().focus().toggleCodeBlock().run()}
           className={buildClassName("codeBlock")}
+          aria-label="Code Block"
         >
-          pre
+          <FontAwesomeIcon icon={faTerminal} />
         </button>
       </div>
       <div className="tooltip" data-tip="Blockquote">
         <button
           onClick={() => editor.chain().focus().toggleBlockquote().run()}
           className={buildClassName("blockquote")}
+          aria-label="Blockquote"
         >
-          bq
+          <FontAwesomeIcon icon={faQuoteLeft} />
         </button>
       </div>
       <div className="tooltip" data-tip="Horizontal Rule">
         <button
           onClick={() => editor.chain().focus().setHorizontalRule().run()}
           className="btn btn-square btn-sm mr-2 mb-2 btn-outline"
+          aria-label="Horizontal Rule"
         >
-          hr
+          <FontAwesomeIcon icon={faGripLines} />
         </button>
       </div>
       <div className="tooltip" data-tip="Line Break">
         <button
           onClick={() => editor.chain().focus().setHardBreak().run()}
           className="btn btn-square btn-sm mr-2 mb-2 btn-outline"
+          aria-label="Line Break"
         >
-          br
+          <FontAwesomeIcon icon={faFileLines} />
         </button>
       </div>
       <div className="tooltip" data-tip="Clear Formatting">
@@ -179,8 +219,9 @@ const MenuBar = ({ editor }) => {
             editor.chain().focus().clearNodes().run();
           }}
           className="btn btn-square btn-sm mr-2 mb-2 btn-outline"
+          aria-label="Clear Formatting"
         >
-          clear
+          <FontAwesomeIcon icon={faTextSlash} />
         </button>
       </div>
       <div className="tooltip" data-tip="Undo">
@@ -190,8 +231,9 @@ const MenuBar = ({ editor }) => {
           className={`btn btn-square btn-sm mr-2 mb-2 btn-outline ${
             !editor.can().chain().focus().undo().run() ? "btn-disabled" : ""
           }`}
+          aria-label="Undo"
         >
-          undo
+          <FontAwesomeIcon icon={faRotateLeft} />
         </button>
       </div>
       <div className="tooltip" data-tip="Redo">
@@ -201,8 +243,9 @@ const MenuBar = ({ editor }) => {
           className={`btn btn-square btn-sm mr-2 mb-2 btn-outline ${
             !editor.can().chain().focus().redo().run() ? "btn-disabled" : ""
           }`}
+          aria-label="Redo"
         >
-          redo
+          <FontAwesomeIcon icon={faRotateRight} />
         </button>
       </div>
     </>
