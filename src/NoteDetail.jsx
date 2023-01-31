@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { db } from "./data/db";
 import SanitizedHTML from "./components/SanitizedHTML";
-import { buildDetailData } from "./utils/noteDetailUtils";
+import { buildDetailData } from "./utils/noteUtils";
 
 function NoteDetail() {
   const [note, setNote] = useState();

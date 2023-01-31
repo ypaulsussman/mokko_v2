@@ -23,7 +23,7 @@ function DetailsEditor({
         />
         <label className="label">
           <span className="label-text-alt">
-            Please use YYYY-MM-DD format, or keep empty to use solely as a cue
+            Please use YYYY-MM-DD format, or keep empty to use this note solely as a cue
             for other notes.
           </span>
         </label>

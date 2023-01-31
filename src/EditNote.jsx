@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { db } from "./data/db";
+import { validateNote } from "./utils/noteUtils";
 import RichTextEditor from "./components/RichTextEditor";
 import TagEditor from "./components/TagEditor";
 import DetailsEditor from "./components/DetailsEditor";
@@ -85,16 +86,15 @@ function EditNote() {
   const saveNote = async (e) => {
     e.preventDefault();
 
-    const tz_agnostic_next_occurrence = note.next_occurrence
-      ? new Date(`${note.next_occurrence}T00:00:00`).toISOString().slice(0, 10)
-      : "";
+    const { validatedNote, validationErrors } = validateNote(note);
+    if (validationErrors) {
+      alert(validationErrors);
+      return;
+    } else {
+      await db.notes.update(Number(noteId), validatedNote);
 
-    await db.notes.update(Number(noteId), {
-      ...note,
-      next_occurrence: tz_agnostic_next_occurrence,
-    });
-
-    navigate(`/manage/notes/${noteId}`);
+      navigate(`/manage/notes/${noteId}`);
+    }
   };
 
   if (!note) {
@@ -106,7 +106,6 @@ function EditNote() {
           <h1 className="text-center">{`Edit Note #${note.id}`}</h1>
           {/* NB future Y: you spent hours trying to figure out what HTML property of the <form> tag causes the entire page to rerender when hitting one of the tiptap buttons but _not_ when actually adding/removing text from the editor... smdh this is ugly af but at least doesn't totally break accessibility... :/ Consider getting to the bottom of this as a fun task for your next vacation lol? */}
           <div role="form" aria-label="Edit Note">
-            
             <div className="flex justify-end">
               <button
                 type="submit"

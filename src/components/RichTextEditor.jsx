@@ -260,6 +260,7 @@ function RichTextEditor({ currentText, handleContentUpdate }) {
       const newText = editor.getHTML();
       handleContentUpdate(newText);
     },
+    autofocus: 'start'
   });
 
   return (

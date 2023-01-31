@@ -1,4 +1,4 @@
-import { CUE_TYPES } from "../data/constants";
+import { CUE_TYPES, EMPTY_P_TAG, INVALID_DATE } from "../data/constants";
 
 function getBuiltInCueString(membership) {
   return (
@@ -95,4 +95,46 @@ export function buildDetailData({
       {buildCueData(suspended, available_cue_types)}
     </>
   );
+}
+
+function validateNextOccurrence(next_occurrence) {
+  // Empty string is fine
+  if (!next_occurrence) {
+    return next_occurrence;
+  }
+
+  try {
+    return new Date(`${next_occurrence}T00:00:00`).toISOString().slice(0, 10);
+  } catch (error) {
+    return INVALID_DATE;
+  }
+}
+
+export function validateNote(note) {
+  let validatedNote = null;
+  let validationErrors = null;
+
+  if (!note.content || note.content === EMPTY_P_TAG) {
+    validationErrors = "Please add text to the note.";
+  }
+
+  const tz_agnostic_next_occurrence = validateNextOccurrence(
+    note.next_occurrence
+  );
+
+  if (tz_agnostic_next_occurrence === INVALID_DATE) {
+    validationErrors = validationErrors
+      ? (validationErrors +=
+          " In addition, please set the next occurrence to a valid date, or leave blank.")
+      : "Please set the next occurrence to a valid date, or leave blank.";
+  }
+
+  if (!validationErrors) {
+    validatedNote = {
+      ...note,
+      next_occurrence: tz_agnostic_next_occurrence,
+    };
+  }
+
+  return { validatedNote, validationErrors };
 }

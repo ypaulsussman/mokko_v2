@@ -100,11 +100,17 @@ function ManageNotes() {
   return (
     <div className="grid">
       <div className="justify-self-center prose">
-        <h1 className="text-center">Your Notes</h1>
+        <div className="grid grid-cols-3">
+          <div className="col-start-2">
+            <h1 className="text-center">Your Notes</h1>
+          </div>
+          <Link to={"new"} className="link block text-right">
+            New Note
+          </Link>
+        </div>
 
         {/* Search Widget */}
-
-        <div className="grid mt-8">
+        <div className="grid">
           <form className="grid justify-self-center w-5/6">
             <input
               type="text"
@@ -153,7 +159,6 @@ function ManageNotes() {
         </div>
 
         {/* Notes List */}
-
         <div className="divider"></div>
         {notes.map((note) => (
           <div key={note.id}>
@@ -170,7 +175,6 @@ function ManageNotes() {
         ))}
 
         {/* Paginator */}
-
         {totalNotePageCount > 1 && (
           <div className="grid my-9">
             <div className="btn-group justify-self-center">
