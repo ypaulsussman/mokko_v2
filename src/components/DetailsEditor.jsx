@@ -9,7 +9,7 @@ function DetailsEditor({
   return (
     <>
       <div className="form-control w-full max-w-xs">
-        <label className="label">
+        <label className="label pt-0">
           <span className="label-text">
             Next surface this note for mokkogen on:
           </span>
@@ -23,28 +23,17 @@ function DetailsEditor({
         />
         <label className="label">
           <span className="label-text-alt">
-            Please use YYYY-MM-DD format, or keep empty to use this note solely as a cue
-            for other notes.
+            Please use YYYY-MM-DD format, or keep empty to use this note solely
+            as a cue for other notes.
           </span>
         </label>
       </div>
 
       <div className="form-control w-full max-w-xs mt-4">
-        <label className="label cursor-pointer">
-          <span className="label-text">Suspend this note for now</span>
-          <input
-            type="checkbox"
-            name="suspended"
-            checked={note.suspended}
-            onChange={handleSuspendedChange}
-            className="checkbox"
-          />
-        </label>
-      </div>
-
-      <div className="form-control w-full max-w-xs mt-4">
         <label className="label">
-          <span className="label-text">Select which decks to draw cue notes from:</span>
+          <span className="label-text">
+            Select which decks to draw cue notes from:
+          </span>
         </label>
         <select
           className="select select-bordered"
@@ -59,6 +48,19 @@ function DetailsEditor({
             </option>
           ))}
         </select>
+      </div>
+
+      <div className="form-control w-full max-w-xs mt-5">
+        <label className="label cursor-pointer">
+          <span className="label-text">Suspend this note for now</span>
+          <input
+            type="checkbox"
+            name="suspended"
+            checked={note.suspended}
+            onChange={handleSuspendedChange}
+            className="checkbox"
+          />
+        </label>
       </div>
     </>
   );

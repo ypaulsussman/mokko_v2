@@ -164,7 +164,7 @@ function ManageNotes() {
           <div key={note.id}>
             {/* undo font-styling applied by `prose` class to link-text*/}
             <Link to={`${note.id}`} className="no-underline font-normal">
-              <div className="card card-bordered shadow-xl">
+              <div className="card card-bordered shadow-lg shadow-gray-500">
                 <div className="card-body">
                   <SanitizedHTML content={note.content} />
                 </div>

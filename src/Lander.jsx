@@ -9,8 +9,8 @@ async function seedDB() {
 
 function Lander() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-      <div className="md:col-start-2 md:col-span-2 prose">
+    <div className="grid mt-8">
+      <div className="justify-self-center prose">
         <h1>Welcome to Mokko!</h1>
 
         <p>The very important things:</p>
