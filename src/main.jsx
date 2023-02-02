@@ -12,6 +12,9 @@ import NewNote from "./NewNote";
 import NoteDetail from "./NoteDetail";
 import EditNote from "./EditNote";
 import ManageMokkos from "./ManageMokkos";
+import NewMokko from "./NewMokko";
+import MokkoDetail from "./MokkoDetail";
+import EditMokko from "./EditMokko";
 import ManageSettings from "./ManageSettings";
 
 import "./main.css";
@@ -54,7 +57,21 @@ const router = createBrowserRouter([
       },
       {
         path: "manage/mokkos",
-        element: <ManageMokkos />,
+        children: [
+          { index: true, element: <ManageMokkos /> },
+          {
+            path: "new",
+            element: <NewMokko />,
+          },
+          {
+            path: ":mokkoId",
+            element: <MokkoDetail />,
+          },
+          {
+            path: ":mokkoId/edit",
+            element: <EditMokko />,
+          },
+        ],
       },
       {
         path: "manage/settings",
