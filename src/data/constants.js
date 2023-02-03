@@ -19,3 +19,6 @@ export const INITIAL_NOTE_DATA = {
 
 export const INVALID_DATE = 'Invalid Date'
 
+export const NOTES_PER_PAGE = 10
+
+export const MOKKOS_PER_PAGE = 10

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { db } from "./data/db";
 import SanitizedHTML from "./components/SanitizedHTML";
+import { NOTES_PER_PAGE } from "./data/constants";
 
 function goLastPage(searchParams, setSearchParams) {
   setSearchParams({
@@ -86,11 +87,11 @@ function ManageNotes() {
       const totalNotes = await notes.count();
 
       const paginatedNotes = await notes
-        .offset(currentPage * 10)
-        .limit(10)
+        .offset(currentPage * NOTES_PER_PAGE)
+        .limit(NOTES_PER_PAGE)
         .toArray();
 
-      setTotalNotePageCount(Math.ceil(totalNotes / 10));
+      setTotalNotePageCount(Math.ceil(totalNotes / NOTES_PER_PAGE));
       setNotes(paginatedNotes);
     }
 

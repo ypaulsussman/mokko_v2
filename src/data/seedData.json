@@ -1725,44 +1725,50 @@
     {
       "id": 1,
       "content": "<p>Does a similar “blocking rule“ run in parallel when people subconsciously let habit/custom (the memory-module) direct their actions? If so, by analogy what is the rule-module? And can one inhibit its blocking via disuse, as with irregular verbs?</p>",
+      "tags": ["linguistics", "neuroscience"],
       "base_note_id": 165,
       "cue_note_id": 166,
-      "date_created": ""
+      "date_created": "2022-12-14"
     },
     {
       "id": 2,
       "content": "<p>These are both examples of the unexpected impact of whatever you repeatedly focus your attention on: perhaps more evidence for the importance of the perceptual learning subfield of research?</p>",
+      "tags": ["neuroscience"],
       "base_note_id": 167,
       "cue_note_id": 168,
-      "date_created": ""
+      "date_created": "2022-12-14"
     },
     {
       "id": 3,
       "content": "<p>Adaptive learning is likely an example of this: but if the custom is “teaching to the middle“ in intro-level classes, then what does the obviation of its necessity open up? What does it allow for? What can now replace it? A social-learning ecosystem wherein you’re grouped based on the task that you are currently facing, to promote collaborative knowledge-building/problem-solving?</p>",
+      "tags": ["pedagogy", "technology"],
       "base_note_id": 165,
       "cue_note_id": 169,
-      "date_created": ""
+      "date_created": "2022-12-16"
     },
     {
       "id": 4,
       "content": "<p>Base note is an example of the cue note: handwriting’s slow speed is a feature, not a bug; it enforces mindfulness as it’s practiced.</p>",
+      "tags": ["pedagogy", "technology"],
       "base_note_id": 170,
       "cue_note_id": 167,
-      "date_created": ""
+      "date_created": "2022-12-17"
     },
     {
       "id": 5,
       "content": "<p>Interesting extension of this: people interact with software as they do with humans, then you would want any adaptive learning suite to nevertheless display the same characteristics as a popular intro-course lecturer: skillful deployment of narrative to maintain engagement; ability to contextualize why different topics matter and how they into relate with others; etc</p>",
+      "tags": ["pedagogy", "technology"],
       "base_note_id": 169,
       "cue_note_id": 171,
-      "date_created": ""
+      "date_created": "2022-12-21"
     },
     {
       "id": 6,
       "content": "<p>By extension, then, true mindfulness involves transcending one’s native language, in the sense that (by directing the speaker’s attention to certain language-delimited aspects of reality) it constrains the “full attention from what’s happening at the moment“?</p>",
+      "tags": ["linguistics", "neuroscience"],
       "base_note_id": 172,
       "cue_note_id": 168,
-      "date_created": ""
+      "date_created": "2022-12-25"
     }
   ],
   "settings": {
