@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { db } from "./data/db";
+import { BUILTIN_CUE_TAG } from "./data/constants";
 import { validateMokko } from "./utils/mokkoUtils";
 import RichTextEditor from "./components/RichTextEditor";
 import TagEditor from "./components/TagEditor";
@@ -15,7 +16,7 @@ function EditMokko() {
   useEffect(() => {
     async function getFormData(mokkoId) {
       const mokkoData = await db.mokkos.get(Number(mokkoId));
-      const unaddableTags = [...mokkoData.tags, "builtin_cue"];
+      const unaddableTags = [...mokkoData.tags, BUILTIN_CUE_TAG];
 
       const [noteTags, mokkoTags] = await Promise.all([
         db.notes.orderBy("tags").keys((tags) => tags),
@@ -96,6 +97,7 @@ function EditMokko() {
               handleContentUpdate={handleContentUpdate}
             />
 
+            <div className="divider" />
             <h2>Tags:</h2>
             <TagEditor
               currentTags={mokko.tags}

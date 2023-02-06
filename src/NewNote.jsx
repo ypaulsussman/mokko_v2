@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { db } from "./data/db";
-import { INITIAL_NOTE_DATA } from "./data/constants";
+import { BUILTIN_CUE_TAG, INITIAL_NOTE_DATA } from "./data/constants";
 import { validateNote } from "./utils/noteUtils";
 import RichTextEditor from "./components/RichTextEditor";
 import TagEditor from "./components/TagEditor";
 import DetailsEditor from "./components/DetailsEditor";
 
-function EditNote() {
+function NewNote() {
   const [note, setNote] = useState({
     ...INITIAL_NOTE_DATA,
     next_occurrence: new Date().toISOString().slice(0, 10),
@@ -18,10 +18,15 @@ function EditNote() {
   // Initial dataload
   useEffect(() => {
     async function getPreexistingTags() {
-      const allTags = await db.notes.orderBy("tags").keys((tags) => tags);
-      const uniqueTags = Array.from(new Set(allTags));
+      const [noteTags, mokkoTags] = await Promise.all([
+        db.notes.orderBy("tags").keys((tags) => tags),
+        db.mokkos.orderBy("tags").keys((tags) => tags),
+      ]);
 
-      setPreexistingTags(uniqueTags);
+      const uniqueTags = Array.from(new Set([...noteTags, ...mokkoTags]));
+      const availableTags = uniqueTags.filter((tag) => tag !== BUILTIN_CUE_TAG);
+
+      setPreexistingTags(availableTags);
     }
 
     getPreexistingTags();
@@ -117,6 +122,7 @@ function EditNote() {
               handleContentUpdate={handleContentUpdate}
             />
 
+            <div className="divider" />
             <h2>Tags:</h2>
             <TagEditor
               currentTags={note.tags}
@@ -149,4 +155,4 @@ function EditNote() {
   }
 }
 
-export default EditNote;
+export default NewNote;

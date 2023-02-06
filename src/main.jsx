@@ -47,7 +47,13 @@ const router = createBrowserRouter([
           },
           {
             path: ":noteId",
-            element: <NoteDetail />,
+            children: [
+              { index: true, element: <NoteDetail /> },
+              {
+                path: "newMokko",
+                element: <NewMokko />,
+              },
+            ],
           },
           {
             path: ":noteId/edit",
@@ -59,10 +65,6 @@ const router = createBrowserRouter([
         path: "manage/mokkos",
         children: [
           { index: true, element: <ManageMokkos /> },
-          {
-            path: "new",
-            element: <NewMokko />,
-          },
           {
             path: ":mokkoId",
             element: <MokkoDetail />,

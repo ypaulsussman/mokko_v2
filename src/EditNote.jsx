@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { db } from "./data/db";
+import { BUILTIN_CUE_TAG } from "./data/constants";
 import { validateNote } from "./utils/noteUtils";
 import RichTextEditor from "./components/RichTextEditor";
 import TagEditor from "./components/TagEditor";
@@ -16,11 +17,11 @@ function EditNote() {
   useEffect(() => {
     async function getFormData(noteId) {
       const noteData = await db.notes.get(Number(noteId));
-      const unaddableTags = [...noteData.tags, "builtin_cue"];
+      const unaddableTags = [...noteData.tags, BUILTIN_CUE_TAG];
 
       const [noteTags, mokkoTags] = await Promise.all([
         db.notes.orderBy("tags").keys((tags) => tags),
-        db.mokkos.orderBy("tags").keys((tags) => tags)
+        db.mokkos.orderBy("tags").keys((tags) => tags),
       ]);
 
       const uniqueTags = Array.from(new Set([...noteTags, ...mokkoTags]));
@@ -126,6 +127,7 @@ function EditNote() {
               handleContentUpdate={handleContentUpdate}
             />
 
+            <div className="divider" />
             <h2>Tags:</h2>
             <TagEditor
               currentTags={note.tags}
