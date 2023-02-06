@@ -46,6 +46,15 @@ function NoteDetail() {
 
           <h2>Details:</h2>
           {buildDetailData(note)}
+
+          <div className="flex justify-end">
+            <Link
+              to={"newMokko"}
+              className="link block text-right text-xs font-light mb-4"
+            >
+              New Mokko
+            </Link>
+          </div>
         </div>
       </div>
     );
