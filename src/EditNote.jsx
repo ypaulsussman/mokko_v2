@@ -18,8 +18,12 @@ function EditNote() {
       const noteData = await db.notes.get(Number(noteId));
       const unaddableTags = [...noteData.tags, "builtin_cue"];
 
-      const allTags = await db.notes.orderBy("tags").keys((tags) => tags);
-      const uniqueTags = Array.from(new Set(allTags));
+      const [noteTags, mokkoTags] = await Promise.all([
+        db.notes.orderBy("tags").keys((tags) => tags),
+        db.mokkos.orderBy("tags").keys((tags) => tags)
+      ]);
+
+      const uniqueTags = Array.from(new Set([...noteTags, ...mokkoTags]));
       const availableTags = uniqueTags.filter(
         (tag) => !unaddableTags.includes(tag)
       );
