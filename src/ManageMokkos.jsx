@@ -84,14 +84,7 @@ function ManageMokkos() {
   return (
     <div className="grid">
       <div className="justify-self-center prose">
-        <div className="grid grid-cols-5">
-          <div className="col-start-2 col-span-3">
-            <h1 className="text-center">Your Mokkos</h1>
-          </div>
-          <Link to={"new"} className="link block text-right">
-            New Mokko
-          </Link>
-        </div>
+        <h1 className="text-center">Your Mokkos</h1>
 
         {/* Search Widget */}
         <div className="grid">

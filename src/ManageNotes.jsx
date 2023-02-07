@@ -171,12 +171,6 @@ function ManageNotes() {
                 </div>
               </div>
             </Link>
-            <Link
-              to={`${note.id}/newMokko`}
-              className="link block text-right text-xs font-light my-4"
-            >
-              New Mokko
-            </Link>
             <div className="divider"></div>
           </div>
         ))}

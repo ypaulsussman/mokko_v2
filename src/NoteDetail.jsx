@@ -6,15 +6,27 @@ import { buildDetailData } from "./utils/noteUtils";
 
 function NoteDetail() {
   const [note, setNote] = useState();
+  const [childMokkos, setChildMokkos] = useState();
   const { noteId } = useParams();
 
   useEffect(() => {
-    async function getNote(noteId) {
+    async function getNoteWithChildMokkos(noteId) {
       const noteData = await db.notes.get(Number(noteId));
+
+      const baseAndCueMokkos = await db.mokkos
+        .filter((mokko) => {
+          return (
+            mokko.base_note_id === Number(noteId) ||
+            mokko.cue_note_id === Number(noteId)
+          );
+        })
+        .toArray();
+
       setNote(noteData);
+      setChildMokkos(baseAndCueMokkos);
     }
 
-    getNote(noteId);
+    getNoteWithChildMokkos(noteId);
   }, [noteId]);
 
   if (!note) {
@@ -22,7 +34,7 @@ function NoteDetail() {
   } else {
     return (
       <div className="grid mb-12">
-        <div className="justify-self-center prose">
+        <div className="justify-self-center prose mb-4">
           <div className="grid grid-cols-3">
             <Link to={"/"} className="link block text-left">
               Delete
@@ -47,14 +59,37 @@ function NoteDetail() {
           <h2>Details:</h2>
           {buildDetailData(note)}
 
-          <div className="flex justify-end">
-            <Link
-              to={"newMokko"}
-              className="link block text-right text-xs font-light mb-4"
-            >
-              New Mokko
-            </Link>
-          </div>
+          {childMokkos.length > 0 && (
+            <details>
+              <summary className="mb-4">
+                {/* `inline` required to work with `::marker` pseudoelement; see also `main.css` */}
+                <h2 className="inline">Child Mokkos</h2>
+              </summary>
+              {childMokkos.map((mokko) => (
+                <div key={mokko.id}>
+                  {/* undo font-styling applied by `prose` class to link-text*/}
+                  <Link
+                    to={`/manage/mokkos/${mokko.id}`}
+                    className="no-underline font-normal"
+                  >
+                    <div className="card card-bordered shadow-lg shadow-gray-500">
+                      <div className="card-body">
+                        <SanitizedHTML content={mokko.content} />
+                      </div>
+                    </div>
+                  </Link>
+                  <div className="divider"></div>
+                </div>
+              ))}
+
+              <Link
+                to={"newMokko"}
+                className="link block text-right text-sm font-light"
+              >
+                Add New Mokko
+              </Link>
+            </details>
+          )}
         </div>
       </div>
     );
