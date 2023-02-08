@@ -1,3 +1,4 @@
+import React from "react";
 import { useRouteError } from "react-router-dom";
 
 function ErrorPage() {
@@ -7,12 +8,12 @@ function ErrorPage() {
       <div className="md:col-start-2 md:col-span-2 prose">
         <h1>Bleh.</h1>
         <p>
-          Hmm, that's not great: the following means Mokko wasn't able to do the
+          Hmm, that&apos;s not great: the following means Mokko wasn&apos;t able to do the
           thing you wanted.
         </p>
         <pre>{error.message || JSON.stringify(error)}</pre>
         <p>
-          If you want to do me (Y, the ~creator) a solid, I'd be grateful if you
+          If you want to do me (Y, the ~creator) a solid, I&apos;d be grateful if you
           copied or screenshot the above as an email to ypaulsussman@gmail.com
           🙇
         </p>

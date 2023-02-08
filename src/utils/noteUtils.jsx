@@ -1,3 +1,4 @@
+import React from "react";
 import { CUE_TYPES, EMPTY_P_TAG, INVALID_DATE } from "../data/constants";
 
 function getBuiltInCueString(membership) {
@@ -12,7 +13,7 @@ function getBuiltInCueString(membership) {
       </p>
       <p>
         By default, no notes that you add will collide with these builtins; you
-        can change that by editing a note's available cue types.
+        can change that by editing a note&apos;s available cue types.
       </p>
     </>
   );
@@ -23,8 +24,9 @@ function buildScheduleData(next_occurrence, current_interval) {
     return (
       <>
         <p>
-          This note isn't scheduled to generate a mokko! To changed that, click
-          "Edit" above and alter its "next surface this note" value.
+          This note isn&apos;t scheduled to generate a mokko! To changed that,
+          click &quot;Edit&quot; above and alter its &quot;next surface this
+          note&quot; value.
         </p>
       </>
     );
@@ -33,7 +35,7 @@ function buildScheduleData(next_occurrence, current_interval) {
       <>
         <p>
           This note is next scheduled to be used for generating a mokko on{" "}
-          {next_occurrence}; after that, it's programmed to surface every{" "}
+          {next_occurrence}; after that, it&apos;s programmed to surface every{" "}
           {current_interval} day
           {current_interval > 1 ? "s" : ""}.
         </p>
@@ -47,8 +49,9 @@ function buildCueData(suspended, available_cue_types) {
     return (
       <>
         <p>
-          This note is currently suspended; it's still visible and editable, but
-          will never surface for mokkogen and will never be selected as a cue.
+          This note is currently suspended; it&apos;s still visible and
+          editable, but will never surface for mokkogen and will never be
+          selected as a cue.
         </p>
       </>
     );
@@ -80,7 +83,6 @@ function buildCueData(suspended, available_cue_types) {
 
 export function buildDetailData({
   builtin_cue_membership,
-  cue_only,
   next_occurrence,
   current_interval,
   suspended,

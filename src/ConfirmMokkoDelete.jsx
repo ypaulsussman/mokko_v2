@@ -1,9 +1,8 @@
+import React from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { db } from "./data/db";
-import SanitizedHTML from "./components/SanitizedHTML";
 
 function ConfirmMokkoDelete() {
-  
   const navigate = useNavigate();
   const { mokkoId } = useParams();
 
@@ -20,7 +19,7 @@ function ConfirmMokkoDelete() {
       <div className="justify-self-center prose mb-4">
         <h1 className="text-center mb-0">Confirm Mokko Deletion</h1>
         <p>
-          If you're not 100% sure, you may want to{" "}
+          If you&apos;re not 100% sure, you may want to{" "}
           <Link to={"/manage/settings"} className="link">
             export a snapshot
           </Link>{" "}

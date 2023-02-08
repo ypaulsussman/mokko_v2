@@ -1,3 +1,4 @@
+import React from 'react';
 import { CUE_TYPES } from "../data/constants";
 
 function DetailsEditor({

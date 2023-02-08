@@ -1,3 +1,4 @@
+import React from "react";
 import { seedMokkos, seedNotes } from "./data/seeds";
 
 async function seedDB() {
@@ -17,21 +18,21 @@ function Lander() {
 
         <ol>
           <li>
-            It's an experiment into using spaced-repetition systems for purposes
-            other than boosting memory-retrieval strength.
+            It&apos;s an experiment into using spaced-repetition systems for
+            purposes other than boosting memory-retrieval strength.
             <ol type="i">
               <li>
-                It attempts to align the concepts of "programmable attention"
-                and "combinatorial idea-creation".
+                It attempts to align the concepts of &quot;programmable
+                attention&quot; and &quot;combinatorial idea-creation&quot;.
               </li>
               <li>
                 See the <code>README.md</code> of{" "}
                 <a
                   href="https://github.com/ypaulsussman/mokko-web"
                   target="_blank"
-                  rel="noopener"
+                  rel="noopener noreferrer"
                 >
-                  this project's v1
+                  this project&apos;s v1
                 </a>{" "}
                 for more.
               </li>
@@ -49,9 +50,9 @@ function Lander() {
                 connection.
               </li>
               <li>
-                It also means that you can't share URL's with others, and that
-                you'll lose all data if you delete this browser or break this
-                device.
+                It also means that you can&apos;t share URL&apos;s with others,
+                and that you&apos;ll lose all data if you delete this browser or
+                break this device.
               </li>
               <li>
                 You can, however, export (and reimport) your work as a flat
@@ -60,8 +61,8 @@ function Lander() {
             </ol>
           </li>
           <li>
-            It's this way deliberately: I don't want your money, your email,
-            your ideas, etc.
+            It&apos;s this way deliberately: I don&apos;t want your money, your
+            email, your ideas, etc.
             <ol type="i">
               <li>
                 I do, however, go ham over the ways technology might improve

@@ -41,7 +41,7 @@ function ConfirmNoteDelete() {
       <div className="justify-self-center prose mb-4">
         <h1 className="text-center mb-0">Confirm Note Deletion</h1>
         <p>
-          If you're not 100% sure, you may want to{" "}
+          If you&apos;re not 100% sure, you may want to{" "}
           <Link to={"/manage/settings"} className="link">
             export a snapshot
           </Link>{" "}
