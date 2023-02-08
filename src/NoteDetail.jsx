@@ -36,7 +36,7 @@ function NoteDetail() {
       <div className="grid mb-12">
         <div className="justify-self-center prose mb-4">
           <div className="grid grid-cols-3">
-            <Link to={"/"} className="link block text-left">
+            <Link to={"delete"} className="link block text-left">
               Delete
             </Link>
             <h1 className="text-center mb-0">{`Note #${note.id}`}</h1>
@@ -61,7 +61,7 @@ function NoteDetail() {
 
           {childMokkos.length > 0 && (
             <details>
-              <summary className="mb-4">
+              <summary className="header-2-sibling mb-4">
                 {/* `inline` required to work with `::marker` pseudoelement; see also `main.css` */}
                 <h2 className="inline">Child Mokkos</h2>
               </summary>

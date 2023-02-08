@@ -11,12 +11,10 @@ function MokkoDetail() {
     async function getMokko(mokkoId) {
       const mokkoData = await db.mokkos.get(Number(mokkoId));
 
-      // await Promise.all(mokkoData.map (async mokko => {
       [mokkoData.baseNote, mokkoData.cueNote] = await Promise.all([
         db.notes.get(Number(mokkoData.base_note_id)),
         db.notes.get(Number(mokkoData.cue_note_id)),
       ]);
-      // }));
 
       setMokko(mokkoData);
     }
@@ -31,7 +29,7 @@ function MokkoDetail() {
       <div className="grid mb-12">
         <div className="justify-self-center prose">
           <div className="grid grid-cols-3">
-            <Link to={"/"} className="link block text-left">
+            <Link to={"delete"} className="link block text-left">
               Delete
             </Link>
             <h1 className="text-center mb-0">{`Mokko #${mokko.id}`}</h1>

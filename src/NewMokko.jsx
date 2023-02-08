@@ -85,7 +85,8 @@ function NewMokko() {
     return (
       <div className="grid">
         <div className="justify-self-center prose">
-          <h1 className="text-center">New Mokko (w/o Note Collision)</h1>
+          <h1 className="text-center mb-0">Add Mokko</h1>
+          <p className="text-center mb-8">(outside of Mokkogen schedule)</p>
           {/* NB future Y: you spent hours trying to figure out what HTML property of the <form> tag causes the entire page to rerender when hitting one of the tiptap buttons but _not_ when actually adding/removing text from the editor... smdh this is ugly af but at least doesn't totally break accessibility... :/ Consider getting to the bottom of this as a fun task for your next vacation lol? */}
           <div role="form" aria-label="New Mokko">
             <div className="flex justify-end">
@@ -117,9 +118,7 @@ function NewMokko() {
               tabIndex={0}
               className="collapse collapse-plus border border-base-300 bg-base-100 rounded-box mt-8"
             >
-              <div className="collapse-title">
-                Parent-Note Reference:
-              </div>
+              <div className="collapse-title">Parent-Note Reference:</div>
 
               <div className="collapse-content">
                 <SanitizedHTML content={parentNoteContent} />

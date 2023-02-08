@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-summary::marker {
+summary.header-2-sibling::marker {
   font-size: 1.5em;
   line-height: 1.33333;
 }
