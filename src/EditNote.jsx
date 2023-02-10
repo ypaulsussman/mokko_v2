@@ -75,16 +75,16 @@ function EditNote() {
 
   const handleAvailableCuesChange = ({ target }) => {
     let newValue;
-    if (note.available_cue_types.includes(target.value)) {
-      newValue = note.available_cue_types.filter(
+    if (note.allowed_cue_types.includes(target.value)) {
+      newValue = note.allowed_cue_types.filter(
         (cueType) => cueType !== target.value
       );
     } else {
-      newValue = [...note.available_cue_types, target.value];
+      newValue = [...note.allowed_cue_types, target.value];
     }
     setNote((note) => ({
       ...note,
-      available_cue_types: newValue,
+      allowed_cue_types: newValue,
     }));
   };
 

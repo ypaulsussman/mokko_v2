@@ -7,8 +7,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "scamper",
-      "available_cue_types": []
+      "cue_type": "scamper",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 2,
@@ -17,8 +18,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "scamper",
-      "available_cue_types": []
+      "cue_type": "scamper",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 3,
@@ -27,8 +29,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "scamper",
-      "available_cue_types": []
+      "cue_type": "scamper",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 4,
@@ -37,8 +40,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "scamper",
-      "available_cue_types": []
+      "cue_type": "scamper",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 5,
@@ -47,8 +51,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "scamper",
-      "available_cue_types": []
+      "cue_type": "scamper",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 6,
@@ -57,8 +62,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "scamper",
-      "available_cue_types": []
+      "cue_type": "scamper",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 7,
@@ -67,8 +73,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "scamper",
-      "available_cue_types": []
+      "cue_type": "scamper",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 8,
@@ -77,8 +84,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "triz",
-      "available_cue_types": []
+      "cue_type": "triz",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 9,
@@ -87,8 +95,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "triz",
-      "available_cue_types": []
+      "cue_type": "triz",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 10,
@@ -97,8 +106,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "triz",
-      "available_cue_types": []
+      "cue_type": "triz",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 11,
@@ -107,8 +117,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "triz",
-      "available_cue_types": []
+      "cue_type": "triz",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 12,
@@ -117,8 +128,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "triz",
-      "available_cue_types": []
+      "cue_type": "triz",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 13,
@@ -127,8 +139,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "triz",
-      "available_cue_types": []
+      "cue_type": "triz",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 14,
@@ -137,8 +150,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "triz",
-      "available_cue_types": []
+      "cue_type": "triz",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 15,
@@ -147,8 +161,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "triz",
-      "available_cue_types": []
+      "cue_type": "triz",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 16,
@@ -157,8 +172,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "triz",
-      "available_cue_types": []
+      "cue_type": "triz",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 17,
@@ -167,8 +183,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "triz",
-      "available_cue_types": []
+      "cue_type": "triz",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 18,
@@ -177,8 +194,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "triz",
-      "available_cue_types": []
+      "cue_type": "triz",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 19,
@@ -187,8 +205,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "triz",
-      "available_cue_types": []
+      "cue_type": "triz",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 20,
@@ -197,8 +216,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "triz",
-      "available_cue_types": []
+      "cue_type": "triz",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 21,
@@ -207,8 +227,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "triz",
-      "available_cue_types": []
+      "cue_type": "triz",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 22,
@@ -217,8 +238,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "triz",
-      "available_cue_types": []
+      "cue_type": "triz",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 23,
@@ -227,8 +249,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "triz",
-      "available_cue_types": []
+      "cue_type": "triz",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 24,
@@ -237,8 +260,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "triz",
-      "available_cue_types": []
+      "cue_type": "triz",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 25,
@@ -247,8 +271,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "triz",
-      "available_cue_types": []
+      "cue_type": "triz",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 26,
@@ -257,8 +282,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "triz",
-      "available_cue_types": []
+      "cue_type": "triz",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 27,
@@ -267,8 +293,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "triz",
-      "available_cue_types": []
+      "cue_type": "triz",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 28,
@@ -277,8 +304,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "triz",
-      "available_cue_types": []
+      "cue_type": "triz",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 29,
@@ -287,8 +315,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "triz",
-      "available_cue_types": []
+      "cue_type": "triz",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 30,
@@ -297,8 +326,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "triz",
-      "available_cue_types": []
+      "cue_type": "triz",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 31,
@@ -307,8 +337,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "triz",
-      "available_cue_types": []
+      "cue_type": "triz",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 32,
@@ -317,8 +348,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "triz",
-      "available_cue_types": []
+      "cue_type": "triz",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 33,
@@ -327,8 +359,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "triz",
-      "available_cue_types": []
+      "cue_type": "triz",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 34,
@@ -337,8 +370,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "triz",
-      "available_cue_types": []
+      "cue_type": "triz",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 35,
@@ -347,8 +381,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "triz",
-      "available_cue_types": []
+      "cue_type": "triz",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 36,
@@ -357,8 +392,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "triz",
-      "available_cue_types": []
+      "cue_type": "triz",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 37,
@@ -367,8 +403,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "triz",
-      "available_cue_types": []
+      "cue_type": "triz",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 38,
@@ -377,8 +414,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "triz",
-      "available_cue_types": []
+      "cue_type": "triz",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 39,
@@ -387,8 +425,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "triz",
-      "available_cue_types": []
+      "cue_type": "triz",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 40,
@@ -397,8 +436,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "triz",
-      "available_cue_types": []
+      "cue_type": "triz",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 41,
@@ -407,8 +447,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "triz",
-      "available_cue_types": []
+      "cue_type": "triz",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 42,
@@ -417,8 +458,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "triz",
-      "available_cue_types": []
+      "cue_type": "triz",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 43,
@@ -427,8 +469,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "triz",
-      "available_cue_types": []
+      "cue_type": "triz",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 44,
@@ -437,8 +480,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "triz",
-      "available_cue_types": []
+      "cue_type": "triz",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 45,
@@ -447,8 +491,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "triz",
-      "available_cue_types": []
+      "cue_type": "triz",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 46,
@@ -457,8 +502,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "triz",
-      "available_cue_types": []
+      "cue_type": "triz",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 47,
@@ -467,8 +513,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "triz",
-      "available_cue_types": []
+      "cue_type": "triz",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 48,
@@ -477,8 +524,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 49,
@@ -487,8 +535,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 50,
@@ -497,8 +546,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 51,
@@ -507,8 +557,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 52,
@@ -517,8 +568,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 53,
@@ -527,8 +579,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 54,
@@ -537,8 +590,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 55,
@@ -547,8 +601,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 56,
@@ -557,8 +612,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 57,
@@ -567,8 +623,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 58,
@@ -577,8 +634,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 59,
@@ -587,8 +645,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 60,
@@ -597,8 +656,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 61,
@@ -607,8 +667,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 62,
@@ -617,8 +678,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 63,
@@ -627,8 +689,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 64,
@@ -637,8 +700,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 65,
@@ -647,8 +711,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 66,
@@ -657,8 +722,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 67,
@@ -667,8 +733,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 68,
@@ -677,8 +744,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 69,
@@ -687,8 +755,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 70,
@@ -697,8 +766,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 71,
@@ -707,8 +777,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 72,
@@ -717,8 +788,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 73,
@@ -727,8 +799,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 74,
@@ -737,8 +810,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 75,
@@ -747,8 +821,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 76,
@@ -757,8 +832,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 77,
@@ -767,8 +843,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 78,
@@ -777,8 +854,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 79,
@@ -787,8 +865,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 80,
@@ -797,8 +876,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 81,
@@ -807,8 +887,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 82,
@@ -817,8 +898,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 83,
@@ -827,8 +909,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 84,
@@ -837,8 +920,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 85,
@@ -847,8 +931,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 86,
@@ -857,8 +942,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 87,
@@ -867,8 +953,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 88,
@@ -877,8 +964,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 89,
@@ -887,8 +975,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 90,
@@ -897,8 +986,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 91,
@@ -907,8 +997,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 92,
@@ -917,8 +1008,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 93,
@@ -927,8 +1019,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 94,
@@ -937,8 +1030,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 95,
@@ -947,8 +1041,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 96,
@@ -957,8 +1052,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 97,
@@ -967,8 +1063,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 98,
@@ -977,8 +1074,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 99,
@@ -987,8 +1085,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 100,
@@ -997,8 +1096,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 101,
@@ -1007,8 +1107,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 102,
@@ -1017,8 +1118,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 103,
@@ -1027,8 +1129,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 104,
@@ -1037,8 +1140,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 105,
@@ -1047,8 +1151,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 106,
@@ -1057,8 +1162,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 107,
@@ -1067,8 +1173,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 108,
@@ -1077,8 +1184,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 109,
@@ -1087,8 +1195,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 110,
@@ -1097,8 +1206,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 111,
@@ -1107,8 +1217,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 112,
@@ -1117,8 +1228,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 113,
@@ -1127,8 +1239,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 114,
@@ -1137,8 +1250,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 115,
@@ -1147,8 +1261,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 116,
@@ -1157,8 +1272,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 117,
@@ -1167,8 +1283,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 118,
@@ -1177,8 +1294,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 119,
@@ -1187,8 +1305,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 120,
@@ -1197,8 +1316,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 121,
@@ -1207,8 +1327,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 122,
@@ -1217,8 +1338,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 123,
@@ -1227,8 +1349,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 124,
@@ -1237,8 +1360,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 125,
@@ -1247,8 +1371,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 126,
@@ -1257,8 +1382,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 127,
@@ -1267,8 +1393,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 128,
@@ -1277,8 +1404,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 129,
@@ -1287,8 +1415,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 130,
@@ -1297,8 +1426,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 131,
@@ -1307,8 +1437,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 132,
@@ -1317,8 +1448,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 133,
@@ -1327,8 +1459,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 134,
@@ -1337,8 +1470,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 135,
@@ -1347,8 +1481,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 136,
@@ -1357,8 +1492,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 137,
@@ -1367,8 +1503,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 138,
@@ -1377,8 +1514,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 139,
@@ -1387,8 +1525,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 140,
@@ -1397,8 +1536,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 141,
@@ -1407,8 +1547,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 142,
@@ -1417,8 +1558,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 143,
@@ -1427,8 +1569,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 144,
@@ -1437,8 +1580,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 145,
@@ -1447,8 +1591,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 146,
@@ -1457,8 +1602,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 147,
@@ -1467,8 +1613,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 148,
@@ -1477,8 +1624,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 149,
@@ -1487,8 +1635,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 150,
@@ -1497,8 +1646,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 151,
@@ -1507,8 +1657,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 152,
@@ -1517,8 +1668,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 153,
@@ -1527,8 +1679,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 154,
@@ -1537,8 +1690,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 155,
@@ -1547,8 +1701,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 156,
@@ -1557,8 +1712,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 157,
@@ -1567,8 +1723,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 158,
@@ -1577,8 +1734,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 159,
@@ -1587,8 +1745,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 160,
@@ -1597,8 +1756,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 161,
@@ -1607,8 +1767,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 162,
@@ -1617,8 +1778,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 163,
@@ -1627,8 +1789,9 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 164,
@@ -1637,88 +1800,97 @@
       "next_occurrence": "",
       "tags": ["builtin_cue"],
       "suspended": false,
-      "builtin_cue_membership": "oblique",
-      "available_cue_types": []
+      "cue_type": "oblique",
+      "allowed_cue_types": [],
+      "prior_mokkogen_interactions": []
     },
     {
       "id": 165,
       "content": "<ul><li>Customs continue to constrain you long after the restrictions that caused them have disappeared.<ul><li>Customary VC practice had once, like the customs about publishing essays, been based on real constraints.<ul><li>Startups had once been much more expensive to start, and proportionally rare.</li><li>Now they could be cheap and common, but</li><li>the VCs&#39; customs still reflected the old world, just as</li><li>customs about writing essays still reflected the constraints of the print era.</li></ul></li><li>Which in turn implies that people who are independent-minded (i.e. less influenced by custom) will have an advantage in fields affected by rapid change (where customs are more likely to be obsolete).<ul><li>Here&#39;s an interesting point, though: you can&#39;t always predict which fields will be affected by rapid change.</li><li>Obviously software and venture capital will be, but who would have predicted that essay writing would be?</li></ul></li></ul></li></ul>",
       "current_interval": 1,
-      "next_occurrence": "",
+      "next_occurrence": "2023-02-03",
       "tags": ["paul-graham", "what-i-worked-on"],
       "suspended": false,
-      "builtin_cue_membership": "",
-      "available_cue_types": ["notes"]
+      "cue_type": "notes",
+      "allowed_cue_types": ["notes"],
+      "prior_mokkogen_interactions": [166, 169]
     },
     {
       "id": 166,
       "content": "<ul><li>The &#39;blocking principle&#39; of irregular verbs:<ul><li>When you produce an irregular form, you have to:<ul><li>not only dredge it out of memory, but also</li><li>repress the &#39;<em>add -ed</em>&#39; rule (so you don’t say e.g.<em>breaked</em>or<em>broked</em></li></ul></li></ul></li><li>Words and rules are accessed in parallel<ul><li>As we plan to utter a verb in the past tense, we simultaneously<ul><li>look up the word in memory and</li><li>activate the rule</li></ul></li><li>An inhibitory link runs from the memory-module to the rule-module</li><li>The memory-module can then gradually slow down the rule-module, as evidence for a match is found</li><li>It may eventually turns the rule-module off for that retrieval</li></ul></li></ul>",
       "current_interval": 1,
-      "next_occurrence": "",
+      "next_occurrence": "2023-02-03",
       "tags": ["steven-pinker", "words-and-rules", "linguistics"],
       "suspended": false,
-      "builtin_cue_membership": "",
-      "available_cue_types": ["notes"]
+      "cue_type": "notes",
+      "allowed_cue_types": ["notes"],
+      "prior_mokkogen_interactions": [165]
     },
     {
       "id": 167,
       "content": "<ul><li>Hand-written notes are superior to typed<ul><li>At least partially because the former forces you to focus more on the semantics (vs pure syntax) of the message you’re hearing</li><li>This derives from the need to rephrase, in order to compensate for the slower pace of notetaking.</li></ul></li></ul>",
       "current_interval": 1,
-      "next_occurrence": "",
+      "next_occurrence": "2023-02-03",
       "tags": ["crash-course-study-skills"],
       "suspended": false,
-      "builtin_cue_membership": "",
-      "available_cue_types": ["notes"]
+      "cue_type": "notes",
+      "allowed_cue_types": ["notes"],
+      "prior_mokkogen_interactions": [168, 170]
     },
     {
       "id": 168,
       "content": "<ul><li>The real effects of a mother tongue are the habits that develop through the frequent use of certain ways of expression:<ul><li>the concepts we are trained to treat as distinct,</li><li>the information our mother tongue continuously forces us to specify,</li><li>the details it requires us to be attentive to, and</li><li>the repeated associations it imposes on us.</li></ul></li></ul>",
       "current_interval": 1,
-      "next_occurrence": "",
+      "next_occurrence": "2023-02-03",
       "tags": ["through-the-language-glass", "linguistics"],
       "suspended": false,
-      "builtin_cue_membership": "",
-      "available_cue_types": ["notes"]
+      "cue_type": "notes",
+      "allowed_cue_types": ["notes"],
+      "prior_mokkogen_interactions": [167, 172]
     },
     {
       "id": 169,
       "content": "<ul><li>Adaptive Learning: eliminates need to ‘teach to the middle’ in larger courses<ul><li>Works better with factual, procedural knowledge than with higher-order/strategic knowledge</li><li>As such, more appropriate to entry-level courses</li></ul></li></ul>",
       "current_interval": 1,
-      "next_occurrence": "",
+      "next_occurrence": "2023-02-03",
       "tags": ["educause", "seven-things-you-should-know-about", "edtech"],
       "suspended": false,
-      "builtin_cue_membership": "",
-      "available_cue_types": ["notes"]
+      "cue_type": "notes",
+      "allowed_cue_types": ["notes"],
+      "prior_mokkogen_interactions": [165, 171]
     },
     {
       "id": 170,
       "content": "<ul><li>Mindfulness:<ul><li>A moment-by-moment awareness</li><li>The process of attentively observing your experience as it unfolds, without judgment or comparisons</li><li>The recognition of each thought as a momentary event that passes through the mind</li></ul></li></ul>",
       "current_interval": 1,
-      "next_occurrence": "",
+      "next_occurrence": "2023-02-03",
       "tags": ["great-courses", "practicing-mindfulness"],
       "suspended": false,
-      "builtin_cue_membership": "",
-      "available_cue_types": ["notes"]
+      "cue_type": "notes",
+      "allowed_cue_types": ["notes"],
+      "prior_mokkogen_interactions": [167]
     },
     {
       "id": 171,
       "content": "<ul><li>People interact with computers and software much like they would with another human.<ul><li>Think of your product as a person: what type do you want it to be? Polite? Stern? Forgiving? Strict? Funny? Deadpan? Serious? Loose?</li><li>Try to design software that acts like a considerate human being who remembers you.</li></ul></li></ul>",
       "current_interval": 1,
-      "next_occurrence": "",
+      "next_occurrence": "2023-02-03",
       "tags": ["hello-startup", "yevgeniy-brikman", "ux"],
       "suspended": false,
-      "builtin_cue_membership": "",
-      "available_cue_types": ["notes"]
+      "cue_type": "notes",
+      "allowed_cue_types": ["notes"],
+      "prior_mokkogen_interactions": [169]
     },
     {
       "id": 172,
       "content": "<ul><li>The mindfulness tradition holds that boredom is not caused by our circumstances<ul><li>Rather, it&#39;s the product of inattention</li><li>That is, it&#39;s the result of withdrawing our full attention from what&#39;s happening at the moment</li></ul></li></ul>",
       "current_interval": 1,
-      "next_occurrence": "",
+      "next_occurrence": "2023-02-03",
       "tags": ["great-courses", "practicing-mindfulness"],
       "suspended": false,
-      "builtin_cue_membership": "",
-      "available_cue_types": ["notes"]
+      "cue_type": "notes",
+      "allowed_cue_types": ["notes"],
+      "prior_mokkogen_interactions": [168]
     }
   ],
   "mokkos": [
@@ -1776,7 +1948,7 @@
       "current interval": 1,
       "tags": [],
       "suspended": false,
-      "available_cue_types": ["notes"]
+      "allowed_cue_types": ["notes"]
     }
   }
 }

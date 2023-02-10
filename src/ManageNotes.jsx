@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { db } from "./data/db";
-import SanitizedHTML from "./components/SanitizedHTML";
 import { NOTES_PER_PAGE } from "./data/constants";
+import { isBuiltInCueNote } from "./utils/noteUtils";
+import SanitizedHTML from "./components/SanitizedHTML";
 
 function goLastPage(searchParams, setSearchParams) {
   setSearchParams({
@@ -66,9 +67,9 @@ function ManageNotes() {
       noBuiltins,
     }) {
       const notes = await db.notes
-        .filter((note) => {
+        .filter(({ cue_type }) => {
           if (noBuiltins) {
-            return !note.builtin_cue_membership;
+            return !isBuiltInCueNote(cue_type);
           } else {
             return true;
           }

@@ -2,15 +2,8 @@ import { db } from "./db";
 import seedData from "./seedData.json";
 
 export async function seedMokkos() {
-  let mokkosWithDates = [];
-  for (let index = 0; index < seedData.mokkos.length; index++) {
-    mokkosWithDates.push({
-      ...seedData.mokkos[index],
-      date_created: new Date().getTime(),
-    });
-  }
   try {
-    db.mokkos.bulkAdd(mokkosWithDates);
+    db.mokkos.bulkAdd(seedData.mokkos);
   } catch (error) {
     console.log("Error seeding Mokkos:", error);
   }

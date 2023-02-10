@@ -51,8 +51,8 @@ function NoteDetail() {
           <h2>Tags:</h2>
           {/* https://tailwindcss.com/docs/list-style-type#arbitrary-values */}
           <ul className="list-['-']">
-            {note.tags.map((tag, idx) => (
-              <li key={idx}>{tag}</li>
+            {note.tags.map((tag) => (
+              <li key={tag}>{tag}</li>
             ))}
           </ul>
 

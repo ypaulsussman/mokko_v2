@@ -1,13 +1,15 @@
 import React from "react";
-import { CUE_TYPES, EMPTY_P_TAG, INVALID_DATE } from "../data/constants";
+import { ALL_CUE_TYPES, EMPTY_P_TAG, INVALID_DATE } from "../data/constants";
 
 function getBuiltInCueString(membership) {
   return (
     <>
       <p>
         This note comes from one of the three built-in cue decks (specifically{" "}
-        <a href={`https://en.wikipedia.org/wiki/${CUE_TYPES[membership].path}`}>
-          {CUE_TYPES[membership].name}
+        <a
+          href={`https://en.wikipedia.org/wiki/${ALL_CUE_TYPES[membership].urlPath}`}
+        >
+          {ALL_CUE_TYPES[membership].name}
         </a>
         .)
       </p>
@@ -44,7 +46,7 @@ function buildScheduleData(next_occurrence, current_interval) {
   }
 }
 
-function buildCueData(suspended, available_cue_types) {
+function buildCueData(suspended, allowed_cue_types) {
   if (suspended) {
     return (
       <>
@@ -58,20 +60,22 @@ function buildCueData(suspended, available_cue_types) {
   } else {
     return (
       <>
-        {available_cue_types.length === 1 ? (
+        {allowed_cue_types.length === 1 ? (
           <p className="mb-12">
             Any time this note surfaces for mokko generation, its partner
             cue-note will be chosen randomly from{" "}
-            {available_cue_types[0] === "notes"
+            {allowed_cue_types[0] === "notes"
               ? "the pool of all notes that you've added."
-              : `the ${CUE_TYPES[available_cue_types[0]].name} deck.`}
+              : `the ${ALL_CUE_TYPES[allowed_cue_types[0]].name} deck.`}
           </p>
         ) : (
           <>
             <p className="mb-12">
               Any time this note surfaces for mokko generation, its partner
               cue-note will be chosen randomly from the following decks:{" "}
-              {available_cue_types.map((cue) => CUE_TYPES[cue].name).join(", ")}
+              {allowed_cue_types
+                .map((cue) => ALL_CUE_TYPES[cue].name)
+                .join(", ")}
               .
             </p>
           </>
@@ -82,19 +86,19 @@ function buildCueData(suspended, available_cue_types) {
 }
 
 export function buildDetailData({
-  builtin_cue_membership,
+  cue_type,
   next_occurrence,
   current_interval,
   suspended,
-  available_cue_types,
+  allowed_cue_types,
 }) {
-  if (builtin_cue_membership) {
-    return getBuiltInCueString(builtin_cue_membership);
+  if (isBuiltInCueNote(cue_type)) {
+    return getBuiltInCueString(cue_type);
   }
   return (
     <>
       {buildScheduleData(next_occurrence, current_interval)}
-      {buildCueData(suspended, available_cue_types)}
+      {buildCueData(suspended, allowed_cue_types)}
     </>
   );
 }
@@ -135,8 +139,13 @@ export function validateNote(note) {
     validatedNote = {
       ...note,
       next_occurrence: tz_agnostic_next_occurrence,
+      cue_type: note.cue_type ? note.cue_type : "notes",
     };
   }
 
   return { validatedNote, validationErrors };
+}
+
+export function isBuiltInCueNote(cue_type) {
+  return cue_type !== "notes";
 }

@@ -1,10 +1,10 @@
 export const BUILTIN_CUE_TAG = "builtin_cue";
 
-export const CUE_TYPES = {
-  oblique: { name: "Oblique Strategies", path: "Oblique_Strategies" },
-  scamper: { name: "SCAMPER", path: "SCAMPER" },
-  triz: { name: "TRIZ", path: "TRIZ" },
-  notes: { name: "Your Collected Notes", path: null },
+export const ALL_CUE_TYPES = {
+  oblique: { name: "Oblique Strategies", urlPath: "Oblique_Strategies" },
+  scamper: { name: "SCAMPER", urlPath: "SCAMPER" },
+  triz: { name: "TRIZ", urlPath: "TRIZ" },
+  notes: { name: "Your Collected Notes", urlPath: null },
 };
 
 export const EMPTY_P_TAG = "<p></p>";
@@ -15,8 +15,8 @@ export const INITIAL_NOTE_DATA = {
   next_occurrence: null,
   tags: [],
   suspended: false,
-  builtin_cue_membership: "",
-  available_cue_types: ["notes"],
+  cue_type: "notes",
+  allowed_cue_types: ["notes"],
 };
 
 export const INITIAL_MOKKO_DATA = {

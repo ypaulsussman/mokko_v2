@@ -46,7 +46,7 @@ function Lander() {
                 browser.
               </li>
               <li>
-                This means no logins, data privacy, and no need for an internet
+                This means no logins, no tracking, and no need for an internet
                 connection.
               </li>
               <li>
@@ -61,8 +61,8 @@ function Lander() {
             </ol>
           </li>
           <li>
-            It&apos;s this way deliberately: I don&apos;t want your money, your
-            email, your ideas, etc.
+            It&apos;s this way deliberately: I don&apos;t (badly) want your
+            money, email, ideas, etc.
             <ol type="i">
               <li>
                 I do, however, go ham over the ways technology might improve

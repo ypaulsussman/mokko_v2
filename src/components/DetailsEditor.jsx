@@ -1,5 +1,5 @@
 import React from 'react';
-import { CUE_TYPES } from "../data/constants";
+import { ALL_CUE_TYPES } from "../data/constants";
 
 function DetailsEditor({
   note,
@@ -39,13 +39,13 @@ function DetailsEditor({
         <select
           className="select select-bordered"
           multiple={true}
-          name="available_cue_types"
-          value={note.available_cue_types}
+          name="allowed_cue_types"
+          value={note.allowed_cue_types}
           onChange={handleAvailableCuesChange}
         >
-          {Object.keys(CUE_TYPES).map((cue_key) => (
+          {Object.keys(ALL_CUE_TYPES).map((cue_key) => (
             <option key={cue_key} value={cue_key}>
-              {CUE_TYPES[cue_key].name}
+              {ALL_CUE_TYPES[cue_key].name}
             </option>
           ))}
         </select>
