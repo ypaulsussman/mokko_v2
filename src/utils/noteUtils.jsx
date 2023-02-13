@@ -149,3 +149,9 @@ export function validateNote(note) {
 export function isBuiltInCueNote(cue_type) {
   return cue_type !== "notes";
 }
+
+export function getRandomArrayIndex(arrayLength) {
+  return Math.floor(
+    Math.random() * arrayLength
+  );
+}

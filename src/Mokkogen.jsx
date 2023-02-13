@@ -1,20 +1,21 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+// import { useNavigate, useParams } from "react-router-dom";
 import { db } from "./data/db";
-import { BUILTIN_CUE_TAG } from "./data/constants";
-import { isBuiltInCueNote, validateNote } from "./utils/noteUtils";
-import RichTextEditor from "./components/RichTextEditor";
+import { MOKKOGEN_COMPLETE } from "./data/constants";
+import { getRandomArrayIndex, isBuiltInCueNote } from "./utils/noteUtils";
+import MokkogenNote from "./components/MokkogenNote";
 
 function Mokkogen() {
-  const [baseNotes, setBaseNotes] = useState(null);
-  const [currentBaseNote, setCurrentBaseNote] = useState();
-  const [currentCueNote, setCurrentCueNote] = useState();
-  const [currentMokko, setCurrentMokko] = useState();
+  const [baseNote, setBaseNote] = useState();
+  const [cueNote, setCueNote] = useState();
+  // const [currentMokko, setCurrentMokko] = useState();
+  const [mokkogenStage, setMokkogenStage] = useState(1);
 
+  // load baseNote
   useEffect(() => {
-    async function getBaseNotes() {
+    async function getBaseNote() {
       const todayString = new Date().toISOString().slice(0, 10);
-      const [firstEligibleBaseNote, ...otherEligibleBaseNotes] = await db.notes
+      const allEligibleBaseNotes = await db.notes
         .filter(
           ({ suspended, cue_type, next_occurrence }) =>
             !suspended &&
@@ -22,18 +23,23 @@ function Mokkogen() {
             next_occurrence <= todayString
         )
         .toArray();
-      if (!firstEligibleBaseNote) {
-        setBaseNotes([]);
+
+      if (!allEligibleBaseNotes) {
+        setBaseNote(MOKKOGEN_COMPLETE);
       } else {
-        setCurrentBaseNote(firstEligibleBaseNote);
-        setBaseNotes(otherEligibleBaseNotes);
+        const randomizerOffset = getRandomArrayIndex(
+          allEligibleBaseNotes.length
+        );
+        setBaseNote(allEligibleBaseNotes[randomizerOffset]);
       }
     }
-    getBaseNotes();
+    getBaseNote();
   }, []);
 
+  // load cueNote
   useEffect(() => {
-    if (!currentBaseNote?.id) {
+    // Don't search if the next baseNote is "no baseNote"
+    if (!baseNote?.id) {
       return;
     }
 
@@ -41,25 +47,35 @@ function Mokkogen() {
       currentBaseNoteId,
       currentBaseNoteAllowedCueTypes
     ) {
-      const [firstEligibleCueNote] = await db.notes
+      const allEligibleCueNotes = await db.notes
         .filter(
           ({ id, prior_mokkogen_interactions, cue_type }) =>
             currentBaseNoteAllowedCueTypes.includes(cue_type) &&
             !prior_mokkogen_interactions.includes(currentBaseNoteId) &&
             id !== currentBaseNoteId
         )
-        .limit(1)
         .toArray();
 
-      setCurrentCueNote(firstEligibleCueNote);
+      const randomizerOffset = getRandomArrayIndex(allEligibleCueNotes.length);
+      setCueNote(allEligibleCueNotes[randomizerOffset]);
     }
 
-    getCueNote(currentBaseNote.id, currentBaseNote.allowed_cue_types);
-  }, [currentBaseNote?.id, currentBaseNote?.allowed_cue_types]);
+    getCueNote(baseNote.id, baseNote.allowed_cue_types);
+  }, [baseNote?.id, baseNote?.allowed_cue_types]);
 
-  if (!baseNotes) {
+  const handleBaseNoteUpdate = (newText) => {
+    // NB future Y: see same weird issue in <EditNote>
+    setBaseNote((baseNote) => ({ ...baseNote, content: newText }));
+  };
+
+  const handleCueNoteUpdate = (newText) => {
+    // NB future Y: see same weird issue in <EditNote>
+    setCueNote((cueNote) => ({ ...cueNote, content: newText }));
+  };
+
+  if (!baseNote) {
     return <></>;
-  } else if (baseNotes && !baseNotes.length) {
+  } else if (baseNote === MOKKOGEN_COMPLETE) {
     return (
       <>
         <p>You've completed all the available notes for today!</p>
@@ -67,9 +83,24 @@ function Mokkogen() {
     );
   } else {
     return (
-      <>
-        <p>mokkogen goes here, later</p>
-      </>
+      <div className="flex flex-wrap justify-center gap-8 m-12">
+        <MokkogenNote
+          note={baseNote}
+          setNote={handleBaseNoteUpdate}
+          mokkogenStage={mokkogenStage}
+          setMokkogenStage={setMokkogenStage}
+          isCue={false}
+        />
+        {[2, 3].includes(mokkogenStage) && cueNote && (
+          <MokkogenNote
+            note={cueNote}
+            setNote={handleCueNoteUpdate}
+            mokkogenStage={mokkogenStage}
+            setMokkogenStage={setMokkogenStage}
+            isCue={true}
+          />
+        )}
+      </div>
     );
   }
 }

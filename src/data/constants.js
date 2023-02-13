@@ -1,5 +1,9 @@
 export const BUILTIN_CUE_TAG = "builtin_cue";
 
+export const INVALID_DATE = "Invalid Date";
+
+export const MOKKOGEN_COMPLETE = "Mokkogen Complete";
+
 export const ALL_CUE_TYPES = {
   oblique: { name: "Oblique Strategies", urlPath: "Oblique_Strategies" },
   scamper: { name: "SCAMPER", urlPath: "SCAMPER" },
@@ -24,7 +28,6 @@ export const INITIAL_MOKKO_DATA = {
   tags: [],
 };
 
-export const INVALID_DATE = "Invalid Date";
 
 export const NOTES_PER_PAGE = 10;
 
