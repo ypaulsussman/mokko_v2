@@ -63,14 +63,14 @@ function MokkogenMokko({
   } else {
     return (
       <div className="card card-bordered shadow-lg shadow-gray-500 prose">
-        <div className="card-body flex-col justify-between">
+        <div className="card-body flex-col grow-0 justify-between">
           <RichTextEditor
             currentText={newMokko.content}
             handleContentUpdate={handleNewMokkoContentUpdate}
           />
 
           <div className="divider" />
-          <p>Add tags:</p>
+          <p className="my-0">Add tags:</p>
           <TagEditor
             currentTags={newMokko.tags}
             preexistingTags={preexistingTags}

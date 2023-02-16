@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useState } from "react";
 import { db } from "./data/db";
-import { INITIAL_MOKKO_DATA, MOKKOGEN_COMPLETE } from "./data/constants";
+import { FITS_ALL_THREE_MOKKOGEN_CARDS, INITIAL_MOKKO_DATA, MOKKOGEN_COMPLETE } from "./data/constants";
 import {
   generateBaseNoteNextOccurrence,
   getRandomArrayIndex,
@@ -125,7 +125,7 @@ function Mokkogen() {
       </>
     );
   } else {
-    return (
+    return screen.width >= FITS_ALL_THREE_MOKKOGEN_CARDS ? (
       <div className="flex flex-wrap justify-center gap-8 m-12">
         <MokkogenNote
           note={baseNote}
@@ -143,6 +143,41 @@ function Mokkogen() {
             isCue={true}
           />
         )}
+        {mokkogenStage === 3 && (
+          <MokkogenMokko
+            newMokko={newMokko}
+            setNewMokko={setNewMokko}
+            currentBaseNoteInterval={baseNote.current_interval}
+            newBaseNoteInterval={newBaseNoteInterval}
+            setNewBaseNoteInterval={setNewBaseNoteInterval}
+            handleMokkoSubmit={handleMokkoSubmit}
+          />
+        )}
+      </div>
+    ) : (
+      <div className="flex flex-wrap justify-evenly items-center gap-8 m-12">
+        <div
+          className={`flex flex-wrap justify-center gap-8 ${
+            mokkogenStage === 3 && "flex-col"
+          }`}
+        >
+          <MokkogenNote
+            note={baseNote}
+            setNote={setBaseNote}
+            mokkogenStage={mokkogenStage}
+            setMokkogenStage={setMokkogenStage}
+            isCue={false}
+          />
+          {[2, 3].includes(mokkogenStage) && cueNote && (
+            <MokkogenNote
+              note={cueNote}
+              setNote={setCueNote}
+              mokkogenStage={mokkogenStage}
+              setMokkogenStage={setMokkogenStage}
+              isCue={true}
+            />
+          )}
+        </div>
         {mokkogenStage === 3 && (
           <MokkogenMokko
             newMokko={newMokko}

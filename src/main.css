@@ -2,7 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Increase the size of the 'click-to-open-and-close' icon 
+for the 'child mokkos' accordion component inside NoteDetail*/
 summary.header-2-sibling::marker {
   font-size: 1.5em;
   line-height: 1.33333;
+}
+
+/* Visually denote that there is a clickable <textarea> inside the RTE */
+/* NB `#6B7280` => `gray-500` in Tailwind's palette */
+div.ProseMirror:not(:focus) {
+  border: 0.1rem solid #6b7280;
+  border-radius: 5px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }

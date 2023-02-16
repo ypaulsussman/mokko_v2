@@ -33,3 +33,5 @@ export const NOTES_PER_PAGE = 10;
 export const MOKKOS_PER_PAGE = 10;
 
 export const BASE_NOTE_INTERVALS = [1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144];
+
+export const FITS_ALL_THREE_MOKKOGEN_CARDS = 1920
