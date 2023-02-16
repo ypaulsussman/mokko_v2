@@ -21,6 +21,11 @@ function MokkogenNote({
     }
   };
 
+  const handleNoteContentUpdate = (newText) => {
+    // NB future Y: see same weird issue in <EditNote>
+    setNote((note) => ({ ...note, content: newText }));
+  };
+
   async function saveNoteContent(e) {
     e.preventDefault();
 
@@ -41,7 +46,7 @@ function MokkogenNote({
         {isEditing ? (
           <RichTextEditor
             currentText={note.content}
-            handleContentUpdate={setNote}
+            handleContentUpdate={handleNoteContentUpdate}
           />
         ) : (
           <SanitizedHTML content={note.content} />
@@ -60,7 +65,7 @@ function MokkogenNote({
               Edit
             </button>
           )}
-          {isCurrentNote() && (
+          {isCurrentNote() && !isEditing && (
             <button
               className="btn btn-ghost"
               onClick={() =>

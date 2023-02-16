@@ -1818,7 +1818,7 @@
     {
       "id": 166,
       "content": "<ul><li>The &#39;blocking principle&#39; of irregular verbs:<ul><li>When you produce an irregular form, you have to:<ul><li>not only dredge it out of memory, but also</li><li>repress the &#39;<em>add -ed</em>&#39; rule (so you don’t say e.g.<em>breaked</em>or<em>broked</em></li></ul></li></ul></li><li>Words and rules are accessed in parallel<ul><li>As we plan to utter a verb in the past tense, we simultaneously<ul><li>look up the word in memory and</li><li>activate the rule</li></ul></li><li>An inhibitory link runs from the memory-module to the rule-module</li><li>The memory-module can then gradually slow down the rule-module, as evidence for a match is found</li><li>It may eventually turns the rule-module off for that retrieval</li></ul></li></ul>",
-      "current_interval": 1,
+      "current_interval": 2,
       "next_occurrence": "2023-02-03",
       "tags": ["steven-pinker", "words-and-rules", "linguistics"],
       "suspended": false,
@@ -1829,7 +1829,7 @@
     {
       "id": 167,
       "content": "<ul><li>Hand-written notes are superior to typed<ul><li>At least partially because the former forces you to focus more on the semantics (vs pure syntax) of the message you’re hearing</li><li>This derives from the need to rephrase, in order to compensate for the slower pace of notetaking.</li></ul></li></ul>",
-      "current_interval": 1,
+      "current_interval": 3,
       "next_occurrence": "2023-02-03",
       "tags": ["crash-course-study-skills"],
       "suspended": false,
@@ -1840,7 +1840,7 @@
     {
       "id": 168,
       "content": "<ul><li>The real effects of a mother tongue are the habits that develop through the frequent use of certain ways of expression:<ul><li>the concepts we are trained to treat as distinct,</li><li>the information our mother tongue continuously forces us to specify,</li><li>the details it requires us to be attentive to, and</li><li>the repeated associations it imposes on us.</li></ul></li></ul>",
-      "current_interval": 1,
+      "current_interval": 5,
       "next_occurrence": "2023-02-03",
       "tags": ["through-the-language-glass", "linguistics"],
       "suspended": false,
@@ -1851,7 +1851,7 @@
     {
       "id": 169,
       "content": "<ul><li>Adaptive Learning: eliminates need to ‘teach to the middle’ in larger courses<ul><li>Works better with factual, procedural knowledge than with higher-order/strategic knowledge</li><li>As such, more appropriate to entry-level courses</li></ul></li></ul>",
-      "current_interval": 1,
+      "current_interval": 8,
       "next_occurrence": "2023-02-03",
       "tags": ["educause", "seven-things-you-should-know-about", "edtech"],
       "suspended": false,
@@ -1862,7 +1862,7 @@
     {
       "id": 170,
       "content": "<ul><li>Mindfulness:<ul><li>A moment-by-moment awareness</li><li>The process of attentively observing your experience as it unfolds, without judgment or comparisons</li><li>The recognition of each thought as a momentary event that passes through the mind</li></ul></li></ul>",
-      "current_interval": 1,
+      "current_interval": 13,
       "next_occurrence": "2023-02-03",
       "tags": ["great-courses", "practicing-mindfulness"],
       "suspended": false,
@@ -1873,7 +1873,7 @@
     {
       "id": 171,
       "content": "<ul><li>People interact with computers and software much like they would with another human.<ul><li>Think of your product as a person: what type do you want it to be? Polite? Stern? Forgiving? Strict? Funny? Deadpan? Serious? Loose?</li><li>Try to design software that acts like a considerate human being who remembers you.</li></ul></li></ul>",
-      "current_interval": 1,
+      "current_interval": 21,
       "next_occurrence": "2023-02-03",
       "tags": ["hello-startup", "yevgeniy-brikman", "ux"],
       "suspended": false,
@@ -1884,7 +1884,7 @@
     {
       "id": 172,
       "content": "<ul><li>The mindfulness tradition holds that boredom is not caused by our circumstances<ul><li>Rather, it&#39;s the product of inattention</li><li>That is, it&#39;s the result of withdrawing our full attention from what&#39;s happening at the moment</li></ul></li></ul>",
-      "current_interval": 1,
+      "current_interval": 34,
       "next_occurrence": "2023-02-03",
       "tags": ["great-courses", "practicing-mindfulness"],
       "suspended": false,

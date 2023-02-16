@@ -1,13 +1,18 @@
 import React, { useCallback, useEffect, useState } from "react";
 import { db } from "./data/db";
 import { INITIAL_MOKKO_DATA, MOKKOGEN_COMPLETE } from "./data/constants";
-import { getRandomArrayIndex, isBuiltInCueNote } from "./utils/noteUtils";
+import {
+  generateBaseNoteNextOccurrence,
+  getRandomArrayIndex,
+  isBuiltInCueNote,
+} from "./utils/noteUtils";
 import { validateMokko } from "./utils/mokkoUtils";
 import MokkogenNote from "./components/MokkogenNote";
 import MokkogenMokko from "./components/MokkogenMokko";
 
 function Mokkogen() {
   const [baseNote, setBaseNote] = useState();
+  const [newBaseNoteInterval, setNewBaseNoteInterval] = useState();
   const [cueNote, setCueNote] = useState();
   const [newMokko, setNewMokko] = useState({
     ...INITIAL_MOKKO_DATA,
@@ -76,21 +81,6 @@ function Mokkogen() {
     getCueNote(baseNote.id, baseNote.allowed_cue_types);
   }, [baseNote?.id, baseNote?.allowed_cue_types]);
 
-  const handleBaseNoteContentUpdate = (newText) => {
-    // NB future Y: see same weird issue in <EditNote>
-    setBaseNote((baseNote) => ({ ...baseNote, content: newText }));
-  };
-
-  const handleCueNoteContentUpdate = (newText) => {
-    // NB future Y: see same weird issue in <EditNote>
-    setCueNote((cueNote) => ({ ...cueNote, content: newText }));
-  };
-
-  const handleNewMokkoContentUpdate = (newText) => {
-    // NB future Y: see same weird issue in <EditNote>
-    setNewMokko((newMokko) => ({ ...newMokko, content: newText }));
-  };
-
   const handleMokkoSubmit = async (e) => {
     e.preventDefault();
 
@@ -99,12 +89,21 @@ function Mokkogen() {
       alert(validationErrors);
       return;
     } else {
+      const baseNoteNextOccurrence = generateBaseNoteNextOccurrence(
+        newBaseNoteInterval,
+        baseNote.current_interval
+      );
+
       await db.mokkos.add(validatedMokko);
       await db.notes.update(baseNote.id, {
         prior_mokkogen_interactions: [
           ...baseNote.prior_mokkogen_interactions,
           cueNote.id,
         ],
+        current_interval: Number(
+          newBaseNoteInterval ? newBaseNoteInterval : baseNote.current_interval
+        ),
+        next_occurrence: baseNoteNextOccurrence,
       });
       await db.notes.update(cueNote.id, {
         prior_mokkogen_interactions: [
@@ -130,7 +129,7 @@ function Mokkogen() {
       <div className="flex flex-wrap justify-center gap-8 m-12">
         <MokkogenNote
           note={baseNote}
-          setNote={handleBaseNoteContentUpdate}
+          setNote={setBaseNote}
           mokkogenStage={mokkogenStage}
           setMokkogenStage={setMokkogenStage}
           isCue={false}
@@ -138,7 +137,7 @@ function Mokkogen() {
         {[2, 3].includes(mokkogenStage) && cueNote && (
           <MokkogenNote
             note={cueNote}
-            setNote={handleCueNoteContentUpdate}
+            setNote={setCueNote}
             mokkogenStage={mokkogenStage}
             setMokkogenStage={setMokkogenStage}
             isCue={true}
@@ -147,7 +146,10 @@ function Mokkogen() {
         {mokkogenStage === 3 && (
           <MokkogenMokko
             newMokko={newMokko}
-            setNewMokko={handleNewMokkoContentUpdate}
+            setNewMokko={setNewMokko}
+            currentBaseNoteInterval={baseNote.current_interval}
+            newBaseNoteInterval={newBaseNoteInterval}
+            setNewBaseNoteInterval={setNewBaseNoteInterval}
             handleMokkoSubmit={handleMokkoSubmit}
           />
         )}

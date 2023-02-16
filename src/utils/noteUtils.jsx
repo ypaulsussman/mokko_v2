@@ -151,7 +151,13 @@ export function isBuiltInCueNote(cue_type) {
 }
 
 export function getRandomArrayIndex(arrayLength) {
-  return Math.floor(
-    Math.random() * arrayLength
+  return Math.floor(Math.random() * arrayLength);
+}
+
+export function generateBaseNoteNextOccurrence(newInterval, currentInterval) {
+  let today = new Date();
+  today.setDate(
+    today.getDate() + Number(newInterval ? newInterval : currentInterval)
   );
+  return today.toISOString().slice(0, 10);
 }

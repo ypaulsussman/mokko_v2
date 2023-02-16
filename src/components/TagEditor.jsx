@@ -43,6 +43,7 @@ function TagEditor({
             onChange={(e) => setTagToAdd(e.target.value)}
             placeholder="Enter tag to add"
             className="input input-bordered"
+            aria-label="Select a tag, or enter a new one"
           />
           <button
             type="button"
