@@ -1,6 +1,10 @@
 import React, { useCallback, useEffect, useState } from "react";
 import { db } from "./data/db";
-import { FITS_ALL_THREE_MOKKOGEN_CARDS, INITIAL_MOKKO_DATA, MOKKOGEN_COMPLETE } from "./data/constants";
+import {
+  FITS_ALL_THREE_MOKKOGEN_CARDS,
+  INITIAL_MOKKO_DATA,
+  MOKKOGEN_COMPLETE,
+} from "./data/constants";
 import {
   generateBaseNoteNextOccurrence,
   getRandomArrayIndex,
@@ -10,16 +14,18 @@ import { validateMokko } from "./utils/mokkoUtils";
 import MokkogenNote from "./components/MokkogenNote";
 import MokkogenMokko from "./components/MokkogenMokko";
 
+const EMPTY_MOKKO = {
+  ...INITIAL_MOKKO_DATA,
+  base_note_id: null,
+  cue_note_id: null,
+  date_created: new Date().toISOString().slice(0, 10),
+};
+
 function Mokkogen() {
   const [baseNote, setBaseNote] = useState();
   const [newBaseNoteInterval, setNewBaseNoteInterval] = useState();
   const [cueNote, setCueNote] = useState();
-  const [newMokko, setNewMokko] = useState({
-    ...INITIAL_MOKKO_DATA,
-    base_note_id: null,
-    cue_note_id: null,
-    date_created: new Date().toISOString().slice(0, 10),
-  });
+  const [newMokko, setNewMokko] = useState();
   const [mokkogenStage, setMokkogenStage] = useState(1);
 
   const getBaseNote = useCallback(async function () {
@@ -37,30 +43,21 @@ function Mokkogen() {
       setBaseNote(MOKKOGEN_COMPLETE);
     } else {
       const randomizerOffset = getRandomArrayIndex(allEligibleBaseNotes.length);
-      setBaseNote(allEligibleBaseNotes[randomizerOffset]);
-      setNewMokko({
-        ...newMokko,
-        base_note_id: allEligibleBaseNotes[randomizerOffset].id,
-      });
+      const newBaseNote = allEligibleBaseNotes[randomizerOffset];
+
+      setBaseNote(newBaseNote);
+      setNewMokko(EMPTY_MOKKO);
+      getCueNote(newBaseNote.id, newBaseNote.allowed_cue_types);
     }
   }, []);
 
-  // load baseNote
-  useEffect(() => {
-    getBaseNote();
-  }, []);
+  const getCueNote = useCallback(
+    async function (currentBaseNoteId, currentBaseNoteAllowedCueTypes) {
+      // Don't search if the next baseNote is "no baseNote"
+      if (!currentBaseNoteId) {
+        return;
+      }
 
-  // load cueNote
-  useEffect(() => {
-    // Don't search if the next baseNote is "no baseNote"
-    if (!baseNote?.id) {
-      return;
-    }
-
-    async function getCueNote(
-      currentBaseNoteId,
-      currentBaseNoteAllowedCueTypes
-    ) {
       const allEligibleCueNotes = await db.notes
         .filter(
           ({ id, prior_mokkogen_interactions, cue_type }) =>
@@ -71,15 +68,16 @@ function Mokkogen() {
         .toArray();
 
       const randomizerOffset = getRandomArrayIndex(allEligibleCueNotes.length);
-      setNewMokko({
-        ...newMokko,
-        cue_note_id: allEligibleCueNotes[randomizerOffset].id,
-      });
-      setCueNote(allEligibleCueNotes[randomizerOffset]);
-    }
+      const newCueNote = allEligibleCueNotes[randomizerOffset];
+      setCueNote(newCueNote);
+    },
+    [baseNote?.id, baseNote?.allowed_cue_types]
+  );
 
-    getCueNote(baseNote.id, baseNote.allowed_cue_types);
-  }, [baseNote?.id, baseNote?.allowed_cue_types]);
+  // initial load of baseNote (and any available cueNote)
+  useEffect(() => {
+    getBaseNote();
+  }, []);
 
   const handleMokkoSubmit = async (e) => {
     e.preventDefault();
@@ -94,7 +92,12 @@ function Mokkogen() {
         baseNote.current_interval
       );
 
-      await db.mokkos.add(validatedMokko);
+      await db.mokkos.add({
+        ...validatedMokko,
+        base_note_id: baseNote.id,
+        cue_note_id: cueNote?.id ? cueNote.id : baseNote.id,
+      });
+
       await db.notes.update(baseNote.id, {
         prior_mokkogen_interactions: [
           ...baseNote.prior_mokkogen_interactions,
@@ -105,6 +108,7 @@ function Mokkogen() {
         ),
         next_occurrence: baseNoteNextOccurrence,
       });
+
       await db.notes.update(cueNote.id, {
         prior_mokkogen_interactions: [
           ...cueNote.prior_mokkogen_interactions,
@@ -125,40 +129,13 @@ function Mokkogen() {
       </>
     );
   } else {
-    return screen.width >= FITS_ALL_THREE_MOKKOGEN_CARDS ? (
-      <div className="flex flex-wrap justify-center gap-8 m-12">
-        <MokkogenNote
-          note={baseNote}
-          setNote={setBaseNote}
-          mokkogenStage={mokkogenStage}
-          setMokkogenStage={setMokkogenStage}
-          isCue={false}
-        />
-        {[2, 3].includes(mokkogenStage) && cueNote && (
-          <MokkogenNote
-            note={cueNote}
-            setNote={setCueNote}
-            mokkogenStage={mokkogenStage}
-            setMokkogenStage={setMokkogenStage}
-            isCue={true}
-          />
-        )}
-        {mokkogenStage === 3 && (
-          <MokkogenMokko
-            newMokko={newMokko}
-            setNewMokko={setNewMokko}
-            currentBaseNoteInterval={baseNote.current_interval}
-            newBaseNoteInterval={newBaseNoteInterval}
-            setNewBaseNoteInterval={setNewBaseNoteInterval}
-            handleMokkoSubmit={handleMokkoSubmit}
-          />
-        )}
-      </div>
-    ) : (
+    return (
       <div className="flex flex-wrap justify-evenly items-center gap-8 m-12">
         <div
           className={`flex flex-wrap justify-center gap-8 ${
-            mokkogenStage === 3 && "flex-col"
+            mokkogenStage === 3 &&
+            screen.width < FITS_ALL_THREE_MOKKOGEN_CARDS &&
+            "flex-col"
           }`}
         >
           <MokkogenNote
@@ -182,8 +159,13 @@ function Mokkogen() {
           <MokkogenMokko
             newMokko={newMokko}
             setNewMokko={setNewMokko}
-            currentBaseNoteInterval={baseNote.current_interval}
-            newBaseNoteInterval={newBaseNoteInterval}
+            newBaseNoteInterval={
+              // use current_interval as initial value
+              // (can't use `defaultValue` in controlled <select>)
+              newBaseNoteInterval
+                ? newBaseNoteInterval
+                : baseNote.current_interval
+            }
             setNewBaseNoteInterval={setNewBaseNoteInterval}
             handleMokkoSubmit={handleMokkoSubmit}
           />

@@ -7,7 +7,6 @@ import TagEditor from "./TagEditor";
 function MokkogenMokko({
   newMokko,
   setNewMokko,
-  currentBaseNoteInterval,
   newBaseNoteInterval,
   setNewBaseNoteInterval,
   handleMokkoSubmit,
@@ -54,7 +53,7 @@ function MokkogenMokko({
   };
 
   const handleNewMokkoContentUpdate = (newText) => {
-    // NB future Y: see same weird issue in <EditNote>
+    // NB future Y: see note re: identical issue in <EditNote>
     setNewMokko((newMokko) => ({ ...newMokko, content: newText }));
   };
 
@@ -85,7 +84,6 @@ function MokkogenMokko({
             <select
               id="baseNoteInterval"
               name="baseNoteInterval"
-              defaultValue={currentBaseNoteInterval}
               value={newBaseNoteInterval}
               onChange={(e) => setNewBaseNoteInterval(e.target.value)}
               className="select select-bordered "

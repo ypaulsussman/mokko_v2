@@ -22,7 +22,7 @@ function MokkogenNote({
   };
 
   const handleNoteContentUpdate = (newText) => {
-    // NB future Y: see same weird issue in <EditNote>
+    // NB future Y: see note re: identical issue in <EditNote>
     setNote((note) => ({ ...note, content: newText }));
   };
 
