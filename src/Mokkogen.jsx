@@ -30,9 +30,9 @@ function Mokkogen() {
 
   const getCueNote = useCallback(async function (
     currentBaseNoteId,
-    currentBaseNoteAllowedCueTypes
+    currentBaseNoteAllowedCueTypes,
+    currentCueNoteIdToSwap = null
   ) {
-    // Don't search if the next baseNote is "no baseNote"
     if (!currentBaseNoteId) {
       return;
     }
@@ -42,7 +42,7 @@ function Mokkogen() {
         ({ id, prior_mokkogen_interactions, cue_type }) =>
           currentBaseNoteAllowedCueTypes.includes(cue_type) &&
           !prior_mokkogen_interactions.includes(currentBaseNoteId) &&
-          id !== currentBaseNoteId
+          ![currentBaseNoteId, currentCueNoteIdToSwap].includes(id)
       )
       .toArray();
 
@@ -107,7 +107,7 @@ function Mokkogen() {
       await db.notes.update(baseNote.id, {
         prior_mokkogen_interactions: [
           ...baseNote.prior_mokkogen_interactions,
-          cueNote.id,
+          cueNote?.id,
         ],
         current_interval: Number(
           newBaseNoteInterval ? newBaseNoteInterval : baseNote.current_interval
@@ -115,12 +115,15 @@ function Mokkogen() {
         next_occurrence: baseNoteNextOccurrence,
       });
 
-      await db.notes.update(cueNote.id, {
-        prior_mokkogen_interactions: [
-          ...cueNote.prior_mokkogen_interactions,
-          baseNote.id,
-        ],
-      });
+      if (cueNote) {
+        await db.notes.update(cueNote.id, {
+          prior_mokkogen_interactions: [
+            ...cueNote.prior_mokkogen_interactions,
+            baseNote.id,
+          ],
+        });
+      }
+
       getBaseNote();
       setMokkogenStage(1);
     }
@@ -159,9 +162,10 @@ function Mokkogen() {
               });
 
               getBaseNote();
+              setMokkogenStage(1);
             }}
           />
-          {[2, 3].includes(mokkogenStage) && cueNote && (
+          {[2, 3].includes(mokkogenStage) && (
             <MokkogenNote
               isCue={true}
               mokkogenStage={mokkogenStage}
@@ -169,7 +173,11 @@ function Mokkogen() {
               note={cueNote}
               setNote={setCueNote}
               swapOrSkipCallback={() => {
-                getCueNote(baseNote.id, baseNote.allowed_cue_types);
+                getCueNote(
+                  baseNote.id,
+                  baseNote.allowed_cue_types,
+                  cueNote?.id
+                );
               }}
             />
           )}
