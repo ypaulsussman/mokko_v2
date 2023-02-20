@@ -28,56 +28,62 @@ function Mokkogen() {
   const [newMokko, setNewMokko] = useState();
   const [mokkogenStage, setMokkogenStage] = useState(1);
 
-  const getBaseNote = useCallback(async function () {
-    const todayString = new Date().toISOString().slice(0, 10);
-    const allEligibleBaseNotes = await db.notes
+  const getCueNote = useCallback(async function (
+    currentBaseNoteId,
+    currentBaseNoteAllowedCueTypes
+  ) {
+    // Don't search if the next baseNote is "no baseNote"
+    if (!currentBaseNoteId) {
+      return;
+    }
+
+    const allEligibleCueNotes = await db.notes
       .filter(
-        ({ suspended, cue_type, next_occurrence }) =>
-          !suspended &&
-          !isBuiltInCueNote(cue_type) &&
-          next_occurrence <= todayString
+        ({ id, prior_mokkogen_interactions, cue_type }) =>
+          currentBaseNoteAllowedCueTypes.includes(cue_type) &&
+          !prior_mokkogen_interactions.includes(currentBaseNoteId) &&
+          id !== currentBaseNoteId
       )
       .toArray();
 
-    if (!allEligibleBaseNotes) {
-      setBaseNote(MOKKOGEN_COMPLETE);
-    } else {
-      const randomizerOffset = getRandomArrayIndex(allEligibleBaseNotes.length);
-      const newBaseNote = allEligibleBaseNotes[randomizerOffset];
+    const randomizerOffset = getRandomArrayIndex(allEligibleCueNotes.length);
+    const newCueNote = allEligibleCueNotes[randomizerOffset];
+    setCueNote(newCueNote);
+  },
+  []);
 
-      setBaseNote(newBaseNote);
-      setNewMokko(EMPTY_MOKKO);
-      getCueNote(newBaseNote.id, newBaseNote.allowed_cue_types);
-    }
-  }, []);
-
-  const getCueNote = useCallback(
-    async function (currentBaseNoteId, currentBaseNoteAllowedCueTypes) {
-      // Don't search if the next baseNote is "no baseNote"
-      if (!currentBaseNoteId) {
-        return;
-      }
-
-      const allEligibleCueNotes = await db.notes
+  const getBaseNote = useCallback(
+    async function () {
+      const todayString = new Date().toISOString().slice(0, 10);
+      const allEligibleBaseNotes = await db.notes
         .filter(
-          ({ id, prior_mokkogen_interactions, cue_type }) =>
-            currentBaseNoteAllowedCueTypes.includes(cue_type) &&
-            !prior_mokkogen_interactions.includes(currentBaseNoteId) &&
-            id !== currentBaseNoteId
+          ({ suspended, cue_type, next_occurrence }) =>
+            !suspended &&
+            !isBuiltInCueNote(cue_type) &&
+            next_occurrence <= todayString
         )
         .toArray();
 
-      const randomizerOffset = getRandomArrayIndex(allEligibleCueNotes.length);
-      const newCueNote = allEligibleCueNotes[randomizerOffset];
-      setCueNote(newCueNote);
+      if (!allEligibleBaseNotes) {
+        setBaseNote(MOKKOGEN_COMPLETE);
+      } else {
+        const randomizerOffset = getRandomArrayIndex(
+          allEligibleBaseNotes.length
+        );
+        const newBaseNote = allEligibleBaseNotes[randomizerOffset];
+
+        setBaseNote(newBaseNote);
+        setNewMokko(EMPTY_MOKKO);
+        getCueNote(newBaseNote.id, newBaseNote.allowed_cue_types);
+      }
     },
-    [baseNote?.id, baseNote?.allowed_cue_types]
+    [getCueNote]
   );
 
   // initial load of baseNote (and any available cueNote)
   useEffect(() => {
     getBaseNote();
-  }, []);
+  }, [getBaseNote]);
 
   const handleMokkoSubmit = async (e) => {
     e.preventDefault();
@@ -125,7 +131,7 @@ function Mokkogen() {
   } else if (baseNote === MOKKOGEN_COMPLETE) {
     return (
       <>
-        <p>You've completed all the available notes for today!</p>
+        <p>You&apos;ve completed all the available notes for today!</p>
       </>
     );
   } else {
@@ -139,19 +145,25 @@ function Mokkogen() {
           }`}
         >
           <MokkogenNote
-            note={baseNote}
-            setNote={setBaseNote}
+            isCue={false}
             mokkogenStage={mokkogenStage}
             setMokkogenStage={setMokkogenStage}
-            isCue={false}
+            note={baseNote}
+            setNote={setBaseNote}
+            swapSkipCallback={() => {
+              console.log("sup");
+            }}
           />
           {[2, 3].includes(mokkogenStage) && cueNote && (
             <MokkogenNote
-              note={cueNote}
-              setNote={setCueNote}
+              isCue={true}
               mokkogenStage={mokkogenStage}
               setMokkogenStage={setMokkogenStage}
-              isCue={true}
+              note={cueNote}
+              setNote={setCueNote}
+              swapSkipCallback={() => {
+                getCueNote(baseNote.id, baseNote.allowed_cue_types);
+              }}
             />
           )}
         </div>

@@ -10,6 +10,7 @@ function MokkogenNote({
   isCue,
   mokkogenStage,
   setMokkogenStage,
+  swapSkipCallback,
 }) {
   const [isEditing, setIsEditing] = useState(false);
 
@@ -58,12 +59,23 @@ function MokkogenNote({
               Save
             </button>
           ) : (
-            <button
-              className="btn btn-ghost"
-              onClick={() => setIsEditing(true)}
-            >
-              Edit
-            </button>
+            <div>
+              <button
+                className="btn btn-ghost mr-2"
+                onClick={() => setIsEditing(true)}
+              >
+                Edit
+              </button>
+              {isCue ? (
+                <button className="btn btn-ghost" onClick={swapSkipCallback}>
+                  Swap This Cue
+                </button>
+              ) : (
+                <button className="btn btn-ghost" onClick={swapSkipCallback}>
+                  Skip This Base
+                </button>
+              )}
+            </div>
           )}
           {isCurrentNote() && !isEditing && (
             <button

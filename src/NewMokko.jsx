@@ -41,7 +41,7 @@ function NewMokko() {
 
     getPreexistingTags();
     getParentNoteContent();
-  }, []);
+  }, [parentNoteId]);
 
   const handleContentUpdate = (newText) => {
     // NB future Y: like the similar comment below, the usage of callback-function-as-argument-to-setFoo-rather-than-fooValue-itself stems from a bizarre bug in which the other keys inside `mokko` are ignored (and thus reset) on `setMokko` invocation here-but-only-here -- presumably a result of some stale cache of the value being consumed by the RTE, perhaps from interactions with its imperative-DOM-behaviors?
