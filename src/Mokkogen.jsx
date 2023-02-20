@@ -150,8 +150,15 @@ function Mokkogen() {
             setMokkogenStage={setMokkogenStage}
             note={baseNote}
             setNote={setBaseNote}
-            swapSkipCallback={() => {
-              console.log("sup");
+            swapOrSkipCallback={async () => {
+              await db.notes.update(baseNote.id, {
+                next_occurrence: generateBaseNoteNextOccurrence(
+                  null,
+                  baseNote.current_interval
+                ),
+              });
+
+              getBaseNote();
             }}
           />
           {[2, 3].includes(mokkogenStage) && cueNote && (
@@ -161,7 +168,7 @@ function Mokkogen() {
               setMokkogenStage={setMokkogenStage}
               note={cueNote}
               setNote={setCueNote}
-              swapSkipCallback={() => {
+              swapOrSkipCallback={() => {
                 getCueNote(baseNote.id, baseNote.allowed_cue_types);
               }}
             />
