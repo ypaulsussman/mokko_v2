@@ -143,7 +143,7 @@ function Mokkogen() {
         <div
           className={`flex flex-wrap justify-center gap-8 ${
             mokkogenStage === 3 &&
-            screen.width < FITS_ALL_THREE_MOKKOGEN_CARDS &&
+            window.innerWidth < FITS_ALL_THREE_MOKKOGEN_CARDS &&
             "flex-col"
           }`}
         >
