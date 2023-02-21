@@ -1943,12 +1943,7 @@
       "date_created": "2022-12-25"
     }
   ],
-  "settings": {
-    "default_note_options": {
-      "current interval": 1,
-      "tags": [],
-      "suspended": false,
-      "allowed_cue_types": ["notes"]
-    }
-  }
+  "settings": [{
+    "id":1
+  }]
 }

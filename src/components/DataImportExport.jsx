@@ -18,14 +18,14 @@ function DataImportExport() {
     const backupFile = document.getElementById("mokko_backup").files[0];
     const fileText = await backupFile.text();
     const { notes: newNotes, mokkos: newMokkos } = JSON.parse(fileText);
-    db.notes.clear();
-    db.mokkos.clear();
-    db.notes.bulkAdd(newNotes);
-    db.mokkos.bulkAdd(newMokkos);
+    await db.notes.clear();
+    await db.mokkos.clear();
+    await db.notes.bulkAdd(newNotes);
+    await db.mokkos.bulkAdd(newMokkos);
   };
 
   return (
-    <div className="mb-8">
+    <div className="mb-12">
       <div>
         <h2>Export Data</h2>
         <p>

@@ -6,7 +6,7 @@ import Preferences from "./components/Preferences";
 const { PREFERENCES, DATA } = ALL_SETTINGS_TABS;
 
 function ManageSettings() {
-  const [selectedTab, setSelectedTab] = useState(PREFERENCES);
+  const [selectedTab, setSelectedTab] = useState(DATA);
   return (
     <div className="grid">
       <div className="justify-self-center prose">

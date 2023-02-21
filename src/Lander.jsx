@@ -1,5 +1,5 @@
 import React from "react";
-import { seedMokkos, seedNotes } from "./data/seeds";
+import { seedMokkos, seedNotes } from "./utils/appUtils";
 
 async function seedDB() {
   seedNotes();

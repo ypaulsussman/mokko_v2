@@ -64,7 +64,7 @@ function Mokkogen() {
         )
         .toArray();
 
-      if (!allEligibleBaseNotes) {
+      if (allEligibleBaseNotes.length === 0) {
         setBaseNote(MOKKOGEN_COMPLETE);
       } else {
         const randomizerOffset = getRandomArrayIndex(
