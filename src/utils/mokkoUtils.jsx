@@ -1,3 +1,4 @@
+import { getNumericArgsFromDateString } from "../utils/appUtils";
 import { EMPTY_P_TAG } from "../data/constants";
 
 export function validateMokko(mokko) {
@@ -8,9 +9,11 @@ export function validateMokko(mokko) {
     validationErrors = "Please add text to the note.";
   }
 
-  let tz_agnostic_date_created;
+  let date_created_UTC;
   try {
-    tz_agnostic_date_created = new Date(`${mokko.date_created}T00:00:00`)
+    date_created_UTC = new Date(
+      Date.UTC(...getNumericArgsFromDateString(mokko.date_created))
+    )
       .toISOString()
       .slice(0, 10);
   } catch (error) {
@@ -23,7 +26,7 @@ export function validateMokko(mokko) {
   if (!validationErrors) {
     validatedMokko = {
       ...mokko,
-      date_created: tz_agnostic_date_created,
+      date_created: date_created_UTC,
     };
   }
 

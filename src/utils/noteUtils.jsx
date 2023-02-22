@@ -1,4 +1,5 @@
 import React from "react";
+import { getNumericArgsFromDateString } from "../utils/appUtils";
 import { ALL_CUE_TYPES, EMPTY_P_TAG, INVALID_DATE } from "../data/constants";
 
 function getBuiltInCueString(membership) {
@@ -110,7 +111,9 @@ function validateNextOccurrence(next_occurrence) {
   }
 
   try {
-    return new Date(`${next_occurrence}T00:00:00`).toISOString().slice(0, 10);
+    return new Date(Date.UTC(...getNumericArgsFromDateString(next_occurrence)))
+      .toISOString()
+      .slice(0, 10);
   } catch (error) {
     return INVALID_DATE;
   }
@@ -124,11 +127,9 @@ export function validateNote(note) {
     validationErrors = "Please add text to the note.";
   }
 
-  const tz_agnostic_next_occurrence = validateNextOccurrence(
-    note.next_occurrence
-  );
+  const next_occurrence_UTC = validateNextOccurrence(note.next_occurrence);
 
-  if (tz_agnostic_next_occurrence === INVALID_DATE) {
+  if (next_occurrence_UTC === INVALID_DATE) {
     validationErrors = validationErrors
       ? (validationErrors +=
           " In addition, please set the next occurrence to a valid date, or leave blank.")
@@ -138,7 +139,7 @@ export function validateNote(note) {
   if (!validationErrors) {
     validatedNote = {
       ...note,
-      next_occurrence: tz_agnostic_next_occurrence,
+      next_occurrence: next_occurrence_UTC,
       cue_type: note.cue_type ? note.cue_type : "notes",
     };
   }

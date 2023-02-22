@@ -1943,7 +1943,10 @@
       "date_created": "2022-12-25"
     }
   ],
-  "settings": [{
-    "id":1
-  }]
+  "settings": [
+    {
+      "id": 1,
+      "mokkogenDailyLimit": { "ceiling": 6, "resetOn": "" }
+    }
+  ]
 }

@@ -10,16 +10,16 @@ function Preferences() {
   );
 
   useEffect(() => {
-    let appSpecificPreference;
+    let appSpecificDarkModePreference;
     // Can't make useEffect arg an async fn
     async function wrapDarkModeCheck() {
-      appSpecificPreference = await getAppSpecificDarkModePreference();
+      appSpecificDarkModePreference = await getAppSpecificDarkModePreference();
     }
     wrapDarkModeCheck();
 
     // If the user hasn't set it, defer to browser/os settings
-    if (appSpecificPreference !== undefined) {
-      setPrefersDarkMode(appSpecificPreference);
+    if (appSpecificDarkModePreference !== undefined) {
+      setPrefersDarkMode(appSpecificDarkModePreference);
     }
   }, []);
 
