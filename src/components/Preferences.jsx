@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { getAppSpecificDarkModePreference } from "../utils/appUtils";
+import { getUserPreferences } from "../utils/appUtils";
 import { db } from "../data/db";
 
 function Preferences() {
+  // eslint-disable-next-line no-unused-vars
+  const [userPreferences, setUserPreferences] = useState()
   const [prefersDarkMode, setPrefersDarkMode] = useState(
     () =>
       window.matchMedia &&
@@ -10,23 +12,26 @@ function Preferences() {
   );
 
   useEffect(() => {
-    let appSpecificDarkModePreference;
-    // Can't make useEffect arg an async fn
-    async function wrapDarkModeCheck() {
-      appSpecificDarkModePreference = await getAppSpecificDarkModePreference();
-    }
-    wrapDarkModeCheck();
+    async function loadPreferences() {
+      const {
+        prefersDarkMode: appSpecificDarkModePreference,
+        ...otherUserPreferences
+      } = await getUserPreferences();
 
-    // If the user hasn't set it, defer to browser/os settings
-    if (appSpecificDarkModePreference !== undefined) {
-      setPrefersDarkMode(appSpecificDarkModePreference);
+      // If the user hasn't set it, defer to browser/os
+      if (appSpecificDarkModePreference !== null) {
+        setPrefersDarkMode(appSpecificDarkModePreference);
+      }
+
+      setUserPreferences(otherUserPreferences)
     }
+    loadPreferences();
   }, []);
 
   const toggleDarkMode = async () => {
     const newDarkModePreference = !prefersDarkMode;
 
-    await db.settings.update(1, { prefersDarkMode: newDarkModePreference });
+    await db.preferences.update(1, { prefersDarkMode: newDarkModePreference });
 
     const newDarkModeValue = newDarkModePreference ? "dark" : "garden";
     const htmlTag = document.querySelector("html");

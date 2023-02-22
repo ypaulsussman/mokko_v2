@@ -1,10 +1,10 @@
 import { db } from "../data/db";
 import seedData from "../data/seedData.json";
 
-export async function getAppSpecificDarkModePreference() {
-  // so. hacky. fix this someday, and hope nobody notices in the interim
-  const userSettings = await db.settings.toCollection().first();
-  return userSettings ? userSettings.prefersDarkMode : undefined;
+export async function getUserPreferences() {
+  // so. hacky. fix/rearchitect this someday, and hope nobody notices in the interim
+  const userPreferences = await db.preferences.toCollection().first();
+  return userPreferences;
 }
 
 export async function seedMokkos() {
@@ -17,7 +17,7 @@ export async function seedMokkos() {
 
 export async function seedNotes() {
   try {
-    await db.settings.bulkAdd(seedData.settings);
+    await db.preferences.bulkAdd(seedData.preferences);
     await db.notes.bulkAdd(seedData.notes);
   } catch (error) {
     console.log("Error seeding Notes:", error);

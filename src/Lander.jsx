@@ -26,7 +26,7 @@ function Lander() {
                 attention&quot; and &quot;combinatorial idea-creation&quot;.
               </li>
               <li>
-                See the <code>README.md</code> of{" "}
+                See the <code className="m-0 px-1">README.md</code> of{" "}
                 <a
                   href="https://github.com/ypaulsussman/mokko-web"
                   target="_blank"
@@ -61,8 +61,8 @@ function Lander() {
             </ol>
           </li>
           <li>
-            It&apos;s this way deliberately: I don&apos;t (badly) want your
-            money, email, ideas, etc.
+            It&apos;s this way deliberately: I do <em>not</em> want your money,
+            email, ruminations, etc.
             <ol type="i">
               <li>
                 I do, however, go ham over the ways technology might improve
@@ -76,10 +76,19 @@ function Lander() {
           </li>
           <li>
             Sound good?
-            <button type="button" onClick={seedDB} className="btn btn-link">
-              Click here
+            <button
+              type="button"
+              onClick={seedDB}
+              className="btn btn-link m-0 py-0 pl-2 pr-1"
+            >
+              <p className="capitalize">Click here</p>
             </button>
-            to add some data and get started!
+            to add some data and get started! (
+            <em>
+              NB most other pages will be broken without loading that data: but,
+              hey, consent matters.
+            </em>
+            )
           </li>
         </ol>
       </div>
