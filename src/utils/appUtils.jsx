@@ -1,3 +1,4 @@
+import React from "react";
 import { db } from "../data/db";
 import seedData from "../data/seedData.json";
 
@@ -34,4 +35,29 @@ export function getNumericArgsFromDateString(dateInISO) {
   // Zero-indexed months... >_<
   dateArgs[1] = dateArgs[1] - 1;
   return dateArgs;
+}
+
+export function getMokkogenCompleteHTML() {
+  return (
+    <div className="flex flex-col justify-evenly items-center gap-8 m-12">
+      <p className="text-2xl">
+        Noiiiiice: you&apos;ve finished all of today&apos;s notes! 🤘
+      </p>
+    </div>
+  );
+}
+
+export function getMokkogenDailyLimitReachedHTML() {
+  return (
+    <div className="flex flex-col justify-evenly items-center gap-8 m-12">
+      <p className="text-2xl">
+        Congrats! You&apos;ve reached your daily limit of mokkogens 🤙
+      </p>
+      <p className="text-xl">
+        (You can increase/decrease this limit in{" "}
+        <code className="m-0 px-1">Preferences</code>, under{" "}
+        <code className="m-0 px-1">Settings</code> at the top-right)
+      </p>
+    </div>
+  );
 }

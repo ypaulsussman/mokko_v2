@@ -11,11 +11,10 @@ function App() {
         window.matchMedia &&
         window.matchMedia("(prefers-color-scheme: dark)").matches;
 
-      const { prefersDarkMode: appSpecificDarkModePreference } =
-        await getUserPreferences();
-      // If the user hasn't set it, defer to browser/os
-      if (appSpecificDarkModePreference !== null) {
-        darkModePreference = appSpecificDarkModePreference;
+      // If the user hasn't set an app-specific preference, defer to browser/os
+      const userPreferences = await getUserPreferences();
+      if (userPreferences && userPreferences.prefersDarkMode !== null) {
+        darkModePreference = userPreferences.prefersDarkMode;
       }
 
       const darkModeValue = darkModePreference ? "dark" : "garden";

@@ -1946,7 +1946,7 @@
   "preferences": [
     {
       "id": 1,
-      "mokkogenDailyLimit": { "ceiling": 6, "current": 0, "resetOn": "" },
+      "mokkogenDailyLimit": { "ceiling": 6, "current": 0, "resetOn": "2023-02-22" },
       "prefersDarkMode": null
     }
   ]

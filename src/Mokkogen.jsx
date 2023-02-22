@@ -4,7 +4,13 @@ import {
   FITS_ALL_THREE_MOKKOGEN_CARDS,
   INITIAL_MOKKO_DATA,
   MOKKOGEN_COMPLETE,
+  MOKKOGEN_DAILY_LIMIT_REACHED,
 } from "./data/constants";
+import {
+  getMokkogenCompleteHTML,
+  getMokkogenDailyLimitReachedHTML,
+  getUserPreferences,
+} from "./utils/appUtils";
 import {
   generateBaseNoteNextOccurrence,
   getRandomArrayIndex,
@@ -54,6 +60,12 @@ function Mokkogen() {
 
   const getBaseNote = useCallback(
     async function () {
+      const { mokkogenDailyLimit } = await getUserPreferences();
+      if (mokkogenDailyLimit.current >= mokkogenDailyLimit.ceiling) {
+        setBaseNote(MOKKOGEN_DAILY_LIMIT_REACHED);
+        return;
+      }
+
       const todayString = new Date().toISOString().slice(0, 10);
       const allEligibleBaseNotes = await db.notes
         .filter(
@@ -80,8 +92,27 @@ function Mokkogen() {
     [getCueNote]
   );
 
-  // initial load of baseNote (and any available cueNote)
+  // On initial pageload: retrieve first baseNote (and any available cueNote), and
+  // [2] potentially reset dailyMokkoLimit (if first time running mokkogen today)
   useEffect(() => {
+    async function manageDailyMokkoLimit() {
+      const todayString = new Date().toISOString().slice(0, 10);
+      const { mokkogenDailyLimit } = await getUserPreferences();
+
+      if (mokkogenDailyLimit.resetOn <= todayString) {
+        let todayDateObject = new Date();
+        todayDateObject.setDate(todayDateObject.getDate() + 1);
+        const tomorrowString = todayDateObject.toISOString().slice(0, 10);
+
+        await db.preferences.toCollection().modify((preferences) => {
+          preferences.mokkogenDailyLimit.current = 0;
+          preferences.mokkogenDailyLimit.resetOn = tomorrowString;
+          return;
+        });
+      }
+    }
+
+    manageDailyMokkoLimit();
     getBaseNote();
   }, [getBaseNote]);
 
@@ -124,6 +155,12 @@ function Mokkogen() {
         });
       }
 
+      await db.preferences.toCollection().modify((preferences) => {
+        preferences.mokkogenDailyLimit.current =
+          preferences.mokkogenDailyLimit.current + 1;
+        return;
+      });
+
       getBaseNote();
       setMokkogenStage(1);
     }
@@ -132,11 +169,9 @@ function Mokkogen() {
   if (!baseNote) {
     return <></>;
   } else if (baseNote === MOKKOGEN_COMPLETE) {
-    return (
-      <>
-        <p>You&apos;ve completed all the available notes for today!</p>
-      </>
-    );
+    return getMokkogenCompleteHTML();
+  } else if (baseNote === MOKKOGEN_DAILY_LIMIT_REACHED) {
+    return getMokkogenDailyLimitReachedHTML();
   } else {
     return (
       <div className="flex flex-wrap justify-evenly items-center gap-8 m-12">
