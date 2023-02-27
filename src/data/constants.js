@@ -42,3 +42,15 @@ export const ALL_SETTINGS_TABS = {
   PREFERENCES: "preferences",
   DATA: "data",
 };
+
+export const BASE_NOTE_PRIORITIES = {
+  RECENCY: {
+    name: "Prioritize by recency of mokkogen (i.e. smallest current-interval)",
+    value: "recency",
+  },
+  AGE: {
+    name: "Prioritize by note age (i.e. most total prior mokkogens)",
+    value: "age",
+  },
+  NONE: { name: "Choose base note randomly", value: "none" },
+};

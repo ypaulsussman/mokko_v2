@@ -1946,7 +1946,12 @@
   "preferences": [
     {
       "id": 1,
-      "mokkogenDailyLimit": { "ceiling": 6, "current": 0, "resetOn": "2023-02-22" },
+      "mokkogenDailyLimit": {
+        "ceiling": 6,
+        "current": 0,
+        "resetOn": "2023-02-22"
+      },
+      "baseNotePrioritization": "none",
       "prefersDarkMode": null
     }
   ]

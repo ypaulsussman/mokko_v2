@@ -14,7 +14,8 @@ import {
 import {
   generateBaseNoteNextOccurrence,
   getRandomArrayIndex,
-  isBuiltInCueNote,
+  isEligibleBaseNote,
+  selectBaseNoteByPriority,
 } from "./utils/noteUtils";
 import { validateMokko } from "./utils/mokkoUtils";
 import MokkogenNote from "./components/MokkogenNote";
@@ -66,23 +67,16 @@ function Mokkogen() {
         return;
       }
 
-      const todayString = new Date().toISOString().slice(0, 10);
       const allEligibleBaseNotes = await db.notes
-        .filter(
-          ({ suspended, cue_type, next_occurrence }) =>
-            !suspended &&
-            !isBuiltInCueNote(cue_type) &&
-            next_occurrence <= todayString
-        )
+        .filter(isEligibleBaseNote)
         .toArray();
 
       if (allEligibleBaseNotes.length === 0) {
         setBaseNote(MOKKOGEN_COMPLETE);
       } else {
-        const randomizerOffset = getRandomArrayIndex(
-          allEligibleBaseNotes.length
+        const newBaseNote = await selectBaseNoteByPriority(
+          allEligibleBaseNotes
         );
-        const newBaseNote = allEligibleBaseNotes[randomizerOffset];
 
         setBaseNote(newBaseNote);
         setNewMokko(EMPTY_MOKKO);

@@ -1,6 +1,14 @@
 import React from "react";
-import { getNumericArgsFromDateString } from "../utils/appUtils";
-import { ALL_CUE_TYPES, EMPTY_P_TAG, INVALID_DATE } from "../data/constants";
+import {
+  getNumericArgsFromDateString,
+  getUserPreferences,
+} from "../utils/appUtils";
+import {
+  ALL_CUE_TYPES,
+  BASE_NOTE_PRIORITIES,
+  EMPTY_P_TAG,
+  INVALID_DATE,
+} from "../data/constants";
 
 function getBuiltInCueString(membership) {
   return (
@@ -161,4 +169,69 @@ export function generateBaseNoteNextOccurrence(newInterval, currentInterval) {
     today.getDate() + Number(newInterval ? newInterval : currentInterval)
   );
   return today.toISOString().slice(0, 10);
+}
+
+export function isEligibleBaseNote({ suspended, cue_type, next_occurrence }) {
+  const todayString = new Date().toISOString().slice(0, 10);
+  return (
+    !suspended && !isBuiltInCueNote(cue_type) && next_occurrence <= todayString
+  );
+}
+
+export async function selectBaseNoteByPriority(allEligibleBaseNotes) {
+  const { baseNotePrioritization } = await getUserPreferences();
+
+  if (baseNotePrioritization === BASE_NOTE_PRIORITIES.RECENCY.value) {
+    const rankedByRecency = allEligibleBaseNotes.reduce(
+      (accumulatedNotes, currentNote) => {
+        var indexForCurrentNote =
+          accumulatedNotes[currentNote.current_interval];
+
+        if (!indexForCurrentNote) {
+          accumulatedNotes[currentNote.current_interval] = [];
+        }
+
+        accumulatedNotes[currentNote.current_interval].push(currentNote);
+        return accumulatedNotes;
+      },
+      []
+    );
+
+    // get the first item that isn't a JS-array 'empty slot'
+    const mostRecentlyMokkogennedNotes = rankedByRecency.find((e) =>
+      Boolean(e)
+    );
+
+    const randomizerOffset = getRandomArrayIndex(
+      mostRecentlyMokkogennedNotes.length
+    );
+
+    return mostRecentlyMokkogennedNotes[randomizerOffset];
+  } else if (baseNotePrioritization === BASE_NOTE_PRIORITIES.AGE.value) {
+    const rankedAge = allEligibleBaseNotes.reduce(
+      (accumulatedNotes, currentNote) => {
+        var indexForCurrentNote =
+          accumulatedNotes[currentNote.prior_mokkogen_interactions.length];
+
+        if (!indexForCurrentNote) {
+          accumulatedNotes[currentNote.prior_mokkogen_interactions.length] = [];
+        }
+
+        accumulatedNotes[currentNote.prior_mokkogen_interactions.length].push(
+          currentNote
+        );
+        return accumulatedNotes;
+      },
+      []
+    );
+
+    const oldestNotes = rankedAge[rankedAge.length - 1];
+
+    const randomizerOffset = getRandomArrayIndex(oldestNotes.length);
+
+    return oldestNotes[randomizerOffset];
+  } else {
+    const randomizerOffset = getRandomArrayIndex(allEligibleBaseNotes.length);
+    return allEligibleBaseNotes[randomizerOffset];
+  }
 }

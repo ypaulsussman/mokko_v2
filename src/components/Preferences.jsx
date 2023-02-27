@@ -1,5 +1,6 @@
 import React, { useCallback, useEffect, useState } from "react";
 import { getUserPreferences } from "../utils/appUtils";
+import { BASE_NOTE_PRIORITIES } from "../data/constants";
 import { db } from "../data/db";
 
 function Preferences() {
@@ -42,12 +43,16 @@ function Preferences() {
   };
 
   const handleDailyLimitChange = async ({ target: { value } }) => {
-    console.log("value: ", value);
     const newDailyLimit = value ? Number(value) : 0;
     await db.preferences.toCollection().modify((preferences) => {
       preferences.mokkogenDailyLimit.ceiling = newDailyLimit;
       return;
     });
+    await loadPreferences();
+  };
+
+  const handleBaseNotePrioritizationChange = async ({ target: { value } }) => {
+    await db.preferences.update(1, { baseNotePrioritization: value });
     await loadPreferences();
   };
 
@@ -70,7 +75,9 @@ function Preferences() {
 
         <div className="form-control mt-8">
           <label className="label">
-            <span className="label-text">Maximum daily notes for mokkogen:</span>
+            <span className="label-text">
+              Maximum daily notes for mokkogen:
+            </span>
           </label>
           <input
             type="text"
@@ -83,6 +90,28 @@ function Preferences() {
               Leave blank or set to &quot;0&quot; to remove daily limit
             </span>
           </label>
+        </div>
+
+        <div className="form-control w-full max-w-xs mt-4">
+          <label className="label">
+            <span className="label-text">
+              When selecting base notes for mokkogen:
+            </span>
+          </label>
+          <select
+            className="select select-bordered"
+            name="allowed_cue_types"
+            value={userPreferences.baseNotePrioritization}
+            onChange={handleBaseNotePrioritizationChange}
+          >
+            {Object.entries(BASE_NOTE_PRIORITIES).map(
+              ([key, { name, value }]) => (
+                <option key={key} value={value}>
+                  {name}
+                </option>
+              )
+            )}
+          </select>
         </div>
       </div>
     );
