@@ -1,12 +1,5 @@
 import React from "react";
-import { seedMokkos, seedNotes } from "./utils/appUtils";
-
-async function seedDB() {
-  seedNotes();
-  if (import.meta.env.MODE === "development") {
-    seedMokkos();
-  }
-}
+import { seedDB } from "./utils/appUtils";
 
 function Lander() {
   return (
@@ -78,7 +71,9 @@ function Lander() {
             Sound good?
             <button
               type="button"
-              onClick={seedDB}
+              onClick={async () => {
+                await seedDB();
+              }}
               className="btn btn-link m-0 py-0 pl-2 pr-1"
             >
               <p className="capitalize">Click here</p>

@@ -1,6 +1,7 @@
 import React from "react";
 import { db } from "../data/db";
-import seedData from "../data/seedData.json";
+import devSeedData from "../data/seedDataForDev.json";
+import prodSeedData from "../data/seedDataForProd.json";
 
 export async function getUserPreferences() {
   // so. hacky. fix/rearchitect this someday, and hope nobody notices in the interim
@@ -8,20 +9,15 @@ export async function getUserPreferences() {
   return userPreferences;
 }
 
-export async function seedMokkos() {
+export async function seedDB() {
+  const { notes, mokkos, preferences } =
+    import.meta.env.MODE === "development" ? devSeedData : prodSeedData;
   try {
-    await db.mokkos.bulkAdd(seedData.mokkos);
+    await db.notes.bulkAdd(notes);
+    await db.mokkos.bulkAdd(mokkos);
+    await db.preferences.bulkAdd(preferences);
   } catch (error) {
-    console.log("Error seeding Mokkos:", error);
-  }
-}
-
-export async function seedNotes() {
-  try {
-    await db.preferences.bulkAdd(seedData.preferences);
-    await db.notes.bulkAdd(seedData.notes);
-  } catch (error) {
-    console.log("Error seeding Notes:", error);
+    console.log("Error seeding initial data:", error);
   }
 }
 
