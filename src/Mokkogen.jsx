@@ -157,6 +157,7 @@ function Mokkogen() {
 
       getBaseNote();
       setMokkogenStage(1);
+      setNewBaseNoteInterval(baseNote.current_interval);
     }
   };
 

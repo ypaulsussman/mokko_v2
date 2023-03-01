@@ -6,9 +6,10 @@ function DataImportExport() {
 
   const prepareDataForExport = async () => {
     const data = {};
-    [data.notes, data.mokkos] = await Promise.all([
+    [data.notes, data.mokkos, data.preferences] = await Promise.all([
       db.notes.toArray(),
       db.mokkos.toArray(),
+      db.preferences.toArray(),
     ]);
 
     setExportableData(JSON.stringify(data));
@@ -16,12 +17,28 @@ function DataImportExport() {
 
   const importDataFromFile = async () => {
     const backupFile = document.getElementById("mokko_backup").files[0];
+    if (!backupFile) {
+      alert("Please first upload a file from which to import.");
+      return;
+    }
     const fileText = await backupFile.text();
-    const { notes: newNotes, mokkos: newMokkos } = JSON.parse(fileText);
-    await db.notes.clear();
-    await db.mokkos.clear();
-    await db.notes.bulkAdd(newNotes);
-    await db.mokkos.bulkAdd(newMokkos);
+    const {
+      notes: newNotes,
+      mokkos: newMokkos,
+      preferences: newPreferences,
+    } = JSON.parse(fileText);
+
+    await Promise.all([
+      db.notes.clear(),
+      db.mokkos.clear(),
+      db.preferences.clear(),
+    ]);
+
+    await Promise.all([
+      db.notes.bulkAdd(newNotes),
+      db.mokkos.bulkAdd(newMokkos),
+      db.preferences.bulkAdd(newPreferences),
+    ]);
   };
 
   return (
