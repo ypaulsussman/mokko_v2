@@ -87,29 +87,34 @@ function Mokkogen() {
     [getCueNote]
   );
 
-  // On initial pageload: retrieve first baseNote (and any available cueNote), and
-  // [2] potentially reset dailyMokkoLimit (if first time running mokkogen today)
-  useEffect(() => {
-    async function manageDailyMokkoLimit() {
-      const todayString = new Date().toISOString().slice(0, 10);
-      const { mokkogenDailyLimit } = await getUserPreferences();
+  const manageDailyMokkoLimit = useCallback(async function () {
+    const todayString = new Date().toISOString().slice(0, 10);
+    const { mokkogenDailyLimit } = await getUserPreferences();
 
-      if (mokkogenDailyLimit.resetOn <= todayString) {
-        let todayDateObject = new Date();
-        todayDateObject.setDate(todayDateObject.getDate() + 1);
-        const tomorrowString = todayDateObject.toISOString().slice(0, 10);
+    if (mokkogenDailyLimit.resetOn <= todayString) {
+      let todayDateObject = new Date();
+      todayDateObject.setDate(todayDateObject.getDate() + 1);
+      const tomorrowString = todayDateObject.toISOString().slice(0, 10);
 
-        await db.preferences.toCollection().modify((preferences) => {
-          preferences.mokkogenDailyLimit.current = 0;
-          preferences.mokkogenDailyLimit.resetOn = tomorrowString;
-          return;
-        });
-      }
+      await db.preferences.toCollection().modify((preferences) => {
+        preferences.mokkogenDailyLimit.current = 0;
+        preferences.mokkogenDailyLimit.resetOn = tomorrowString;
+        return;
+      });
     }
+  }, []);
 
-    manageDailyMokkoLimit();
-    getBaseNote();
-  }, [getBaseNote]);
+  // Yes this looks janky af, but running them synchronously would often result
+  // in the note-load occurring before the limit-check and thus inaccurately
+  // displaying (yesterday's) "mokkogen limit reached" message
+  // ...pRoBAblY jUsT NEeDs tO Be A cUsTOm HoOk -_-
+  useEffect(() => {
+    async function sequentiallyCheckLimitAndLoadNote() {
+      await manageDailyMokkoLimit();
+      await getBaseNote();
+    }
+    sequentiallyCheckLimitAndLoadNote();
+  }, [getBaseNote, manageDailyMokkoLimit]);
 
   const handleMokkoSubmit = async (e) => {
     e.preventDefault();
