@@ -63,6 +63,8 @@ function DataImportExport() {
               "data:Application/octet-stream," +
               encodeURIComponent(exportableData)
             }`}
+            // @TODO: *don't* move this to UTC, as it needs to be human-readable
+            // as the-day-relative-to-the-reader's-TZ? Or no? Hm...
             download={`backup_${new Date().toISOString().slice(0, 10)}.json`}
           >
             Download Backup Data

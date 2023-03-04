@@ -46,7 +46,8 @@ function Mokkogen() {
 
     const allEligibleCueNotes = await db.notes
       .filter(
-        ({ id, prior_mokkogen_interactions, cue_type }) =>
+        ({ id, cue_type, prior_mokkogen_interactions, suspended }) =>
+          !suspended &&
           currentBaseNoteAllowedCueTypes.includes(cue_type) &&
           !prior_mokkogen_interactions.includes(currentBaseNoteId) &&
           ![currentBaseNoteId, currentCueNoteIdToSwap].includes(id)
