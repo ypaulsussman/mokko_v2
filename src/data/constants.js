@@ -23,6 +23,7 @@ export const INITIAL_NOTE_DATA = {
   suspended: false,
   cue_type: "notes",
   allowed_cue_types: ["notes"],
+  prior_mokkogen_interactions: []
 };
 
 export const INITIAL_MOKKO_DATA = {
