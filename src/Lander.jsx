@@ -5,7 +5,7 @@ function Lander() {
   return (
     <div className="grid mt-8">
       <div className="justify-self-center prose">
-        <h1>Welcome to Mokko!</h1>
+        <h1 className="text-center">Welcome to Mokko!</h1>
 
         <p>The very important things:</p>
 
@@ -25,7 +25,7 @@ function Lander() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  this project&apos;s v1
+                  the project&apos;s v1
                 </a>{" "}
                 for more.
               </li>
@@ -59,7 +59,7 @@ function Lander() {
             <ol type="i">
               <li>
                 I do, however, go ham over the ways technology might improve
-                teaching, thinking, language, and learning!
+                human teaching, thinking, language, and learning!
               </li>
               <li>
                 Hit me up to rap further; I always like to hear what others are
@@ -68,22 +68,30 @@ function Lander() {
             </ol>
           </li>
           <li>
-            Sound good?
-            <button
-              type="button"
-              onClick={async () => {
-                await seedDB();
-              }}
-              className="btn btn-link m-0 py-0 pl-2 pr-1"
-            >
-              <p className="capitalize">Click here</p>
-            </button>
-            to add some data and get started! (
-            <em>
-              NB most other pages will be broken without loading that data: but,
-              hey, consent matters.
-            </em>
-            )
+            Sound good? There are two options for next steps:
+            <ol type="i">
+              <li>
+                Visit the <a href="/about">About page</a> for more of the
+                &quot;how-and-why&quot; details; and/or
+              </li>
+              <li>
+                <button
+                  type="button"
+                  onClick={async () => {
+                    await seedDB();
+                  }}
+                  className="btn btn-link m-0 py-0 pl-2 pr-1"
+                >
+                  <p className="capitalize">Click here</p>
+                </button>
+                to add some data and get started! (
+                <em>
+                  NB most other pages will be broken without loading that data:
+                  but, hey, consent matters.
+                </em>
+                )
+              </li>
+            </ol>
           </li>
         </ol>
       </div>
