@@ -2,11 +2,11 @@ import React from "react";
 
 function About() {
   return (
-    <div className="grid my-8">
+    <div className="grid mt-8 mb-12">
       <div className="justify-self-center prose">
         <h1 className="text-center">About Mokko</h1>
         <section>
-          <p className="text-sm leading-6">
+          <p className="text-sm">
             <em>
               NB: this page elaborates the reasoning behind this application.
             </em>
@@ -30,7 +30,7 @@ function About() {
             </li>
             <li className="pb-2">
               <a href="#feature-selection">
-                Why did you choose these features?
+                Why did you choose these particular features?
               </a>
             </li>
             <li>
@@ -41,11 +41,53 @@ function About() {
 
         <section>
           <h2 id="app-structure">How is the app structured?</h2>
-          <p>@TODO</p>
-          {/* 
-          - explain Note && Mokko structure
-          - explain mokkogen process
-           */}
+          <p>
+            It revolves around two resources, <code>Notes</code> and{" "}
+            <code>Mokkos</code>.
+          </p>
+          <p>
+            Both represent snippets of text: they each have a rich-text{" "}
+            <code>content</code> field, and a list of searchable{" "}
+            <code>tags</code> for appending metadata (
+            <em>as well as several other, resource-unique fields.</em>)
+          </p>
+          <p>
+            Notes are meant to contain anything thought-provoking, anything
+            you&apos;d like to ruminate on in the future: insightful excerpts
+            from something you&apos;ve read, incomplete observations you&apos;d
+            like to hone and worry at further, a friend&apos;s
+            counterintuitive-yet-compelling claim, or even a quotidian fact you
+            find yourself struck by.
+          </p>
+          <p>
+            This app is not meant to be your sole repository of these
+            miscellanea; instead, it allows you to program how often you&apos;ll
+            be prompted/invited to consider each Note.
+          </p>
+          <p>
+            Though it&apos;s sometimes superfluous, I&apos;ve found that
+            juxtaposing the selected Note with a randomly-selected other helps
+            me engage with that base Note from other angles; in my experience,
+            it facilitates rewarding, productive contemplation.
+          </p>
+          <p>
+            A Mokko is the place to record any durable output from any given
+            contemplation.
+          </p>
+          <p>
+            The <code>Manage</code> tab at the top right contains pages for
+            create/read/update/delete actions on those two resources, as well as
+            a data-export utility and a couple settings that I&apos;d found
+            myself wanting to experiment with.
+          </p>
+          <p>
+            The <code>Mokkogen</code> tab, when clicked, will ~randomly select
+            one Note which is scheduled to be surfaced today or prior, to serve
+            as the &quot;base&quot;; it will also randomly select one
+            &quot;cue&quot; Note to pair it with. When you&apos;re ready, you
+            can then save any new thoughts or ideas you&apos;d like to persist
+            into the sibling Mokko form.
+          </p>
         </section>
 
         <section>
@@ -112,17 +154,18 @@ function About() {
           <p>
             I&apos;ve set a calendar reminder to &quot;mokkogen&quot; (
             <em>
-              that is: surface, collide with another note, reflect on their
-              juxtaposition, then note down reflections
+              my dumb shorthand for the process of surfacing a note; colliding
+              it with another note; reflecting on it, them, their juxtaposition,
+              etc; then noting down those reflections
             </em>
-            ) six notes, daily; work/life permits me to hit this ~5/week.
+            ) daily; work/life permits me to hit this ~5/week.
           </p>
           <p>
             (
             <em>
               I&apos;ve been surprised by how time consuming the process can
-              sometimes be! I find it consumes 30-45 minutes, occasionally
-              running longer.
+              sometimes be! I find my typical ~six-note regimen consumes 30-45
+              minutes, occasionally running longer.
             </em>
             )
           </p>
@@ -196,16 +239,18 @@ function About() {
         </section>
 
         <section>
-          <h2 id="feature-selection">Why did you choose these features?</h2>
+          <h2 id="feature-selection">
+            Why did you choose these particular features?
+          </h2>
           <p>I spend a lot of time in Anki already.</p>
           <p>
             I already maintain my beloved filesystem hierarchy of Markdown
             notes.
           </p>
           <p>
-            I have no idea whether I&apos;m going to wake up, one day, and just
-            never again want to think about mokko, versus tinkering on something
-            new instead.
+            (<em>Much as I wish it were otherwise!</em>) I have no idea whether
+            I&apos;m going to wake up, one day, and just never really want to
+            think about mokko again versus e.g. tinkering on something new.
           </p>
           <p>As such, I wanted to hedge my bets in terms of project scope.</p>
           <hr />
@@ -252,14 +297,73 @@ function About() {
 
         <section>
           <h2 id="which-technologies">What technologies did you use?</h2>
-          <p>@TODO</p>
-          {/* 
-- Tech-stack choices
-- first important caveat: this is proof-of-concept code. peep all the (nonexistent) typings! or even unit tests! peep how i made two quick passes at tz-agnostic coercion for storage, decided that i don't actually need day-specific fidelity, and just walked away from it! if anything, take the state of the codebase as me doubling down on my assertion that this isn't some stealth SAAS MVP: i have no intention of converting this to a billable product, because that would involve a bunch of hygenic software development that i just don't feel like doing on my weekends-and-evenings.
-- now, on to the reasoning behind the tools.
-- Selfishly: wanted more practice building in React Hooks; working almost exclusively in Django at work these days, which is fine but [1] has a vastly inferior braces-per-LOC score, and [2] leaves me pretty vulnerable if I find myself unexpectedly needing to pick up a new web-development job.
-- Three "innovation tokens" [link the 'choose boring technology' articles] => IndexedDB, Vite, TailwindCSS 
-*/}
+          <p>
+            An important caveat: everything in the repo is proof-of-concept
+            code.
+          </p>
+          <p>
+            Peep all the (<em>nonexistent</em>) typings, or even (
+            <em>...equally-nonexistent</em>) unit tests! Marvel at how I made
+            two quick passes at tz-agnostic coercion for storage, decided that I
+            don&apos;t actually need day-specific fidelity, and... just walked
+            away from it!{" "}
+          </p>
+          <p>
+            That is, any technical discussion should start from the
+            understanding that the alternative is not &quot;
+            <em>a better technical decision</em>&quot;, but &quot;
+            <em>
+              me reaching my daily level of exhaustion and just e.g. running a
+              D&D campaign instead
+            </em>
+            &quot;.
+          </p>
+          <p>
+            (
+            <em>
+              If anything, take the state of the codebase as good-faith proof of
+              my assertion that this isn&apos;t some stealth SAAS MVP -- I have
+              no intention of converting this to a billable product, because
+              that would involve a bunch of hygenic software development that I
+              100% don&apos;t feel like doing on my evenings and weekends.
+            </em>
+            )
+          </p>
+          <hr />
+          <p>Now: on to the tools, and reasoning behind them.</p>
+          <p>
+            Mokko is a SPA built in React: mostly, I wanted more practice using
+            Hooks, as I came of age in the class-component era and haven&apos;t
+            engaged much with the library since.
+          </p>
+          <p>
+            (
+            <em>
+              I&apos;m working almost exclusively in Django at work these days,
+              which is pleasant enough but 1. has vastly inferior
+              braces-per-LOC, and 2. leaves me pretty vulnerable if I find
+              myself unexpectedly needing to pick up a new web-development job.
+            </em>
+            )
+          </p>
+          <p>
+            It&apos;s hosted with manual deploys to Netlify, which thus far has
+            served admirably.
+          </p>
+          <p>
+            I&apos;ve permitted myself three{" "}
+            <a
+              href="https://boringtechnology.club/#17"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              innovation tokens
+            </a>
+            , spent on Vite, Dexie (
+            <em>to wrap the otherwise-forbidding IndexedDB</em>), and
+            TailwindCSS. Nothing but good things to say about the learnability
+            and ergonomics of each.
+          </p>
         </section>
       </div>
     </div>
