@@ -2,7 +2,7 @@ import React from "react";
 
 function Lander() {
   return (
-    <div className="grid mt-8">
+    <div className="grid mt-8 mb-12">
       <div className="justify-self-center prose">
         <h1 className="text-center">Welcome to Mokko!</h1>
 
