@@ -1,7 +1,5 @@
 import React from "react";
 import { db } from "../data/db";
-import devSeedData from "../data/seedDataForDev.json";
-import prodSeedData from "../data/seedDataForProd.json";
 
 export async function getUserPreferences() {
   // so. hacky. fix/rearchitect this someday, and hope nobody notices in the interim
@@ -9,13 +7,25 @@ export async function getUserPreferences() {
   return userPreferences;
 }
 
-export async function seedDB() {
-  const { notes, mokkos, preferences } =
-    import.meta.env.MODE === "development" ? devSeedData : prodSeedData;
+export async function seedDB(sourceFile) {
+  const { notes, mokkos, preferences } = await import(
+    `../data/seedData--${sourceFile}.json`
+  );
+
   try {
-    await db.notes.bulkAdd(notes);
-    await db.mokkos.bulkAdd(mokkos);
-    await db.preferences.bulkAdd(preferences);
+    await Promise.all([
+      db.notes.clear(),
+      db.mokkos.clear(),
+      db.preferences.clear(),
+    ]);
+
+    await Promise.all([
+      await db.notes.bulkAdd(notes),
+      await db.mokkos.bulkAdd(mokkos),
+      await db.preferences.bulkAdd(preferences),
+    ]);
+
+    alert("Seed Complete!");
   } catch (error) {
     console.log("Error seeding initial data:", error);
   }

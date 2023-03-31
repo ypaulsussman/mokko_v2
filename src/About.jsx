@@ -339,8 +339,8 @@ function About() {
           <p>
             (
             <em>
-              I&apos;m working almost exclusively in Django at work these days,
-              which is pleasant enough but 1. has vastly inferior
+              I&apos;m working almost exclusively in Django at the office, these
+              days, which is pleasant enough but 1. has vastly inferior
               braces-per-LOC, and 2. leaves me pretty vulnerable if I find
               myself unexpectedly needing to pick up a new web-development job.
             </em>

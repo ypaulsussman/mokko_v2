@@ -39,6 +39,8 @@ function DataImportExport() {
       db.mokkos.bulkAdd(newMokkos),
       db.preferences.bulkAdd(newPreferences),
     ]);
+
+    alert("Import Complete!")
   };
 
   return (

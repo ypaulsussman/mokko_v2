@@ -1,5 +1,4 @@
 import React from "react";
-import { seedDB } from "./utils/appUtils";
 
 function Lander() {
   return (
@@ -62,8 +61,8 @@ function Lander() {
                 human teaching, thinking, language, and learning!
               </li>
               <li>
-                Hit me up to rap further; I always like to hear what others are
-                up to. :)
+                Hit me up to chat further; I always like to hear what others are
+                working on :)
               </li>
             </ol>
           </li>
@@ -75,16 +74,8 @@ function Lander() {
                 &quot;how-and-why&quot; details; and/or
               </li>
               <li>
-                <button
-                  type="button"
-                  onClick={async () => {
-                    await seedDB();
-                  }}
-                  className="btn btn-link m-0 py-0 pl-2 pr-1"
-                >
-                  <p className="capitalize">Click here</p>
-                </button>
-                to add some data and get started! (
+                Visit the <a href="/seeds">Seeds page</a> to select/add some
+                demo-data and get started! (
                 <em>
                   NB most other pages will be broken without loading that data:
                   but, hey, consent matters.

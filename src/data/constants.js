@@ -55,3 +55,8 @@ export const BASE_NOTE_PRIORITIES = {
   },
   NONE: { name: "Choose base note randomly", value: "none" },
 };
+
+export const SEED_FILES = {
+  EMPTY: "empty",
+  FULL: "full",
+};

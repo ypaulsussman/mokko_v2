@@ -8,6 +8,7 @@ import Lander from "./Lander";
 import About from "./About";
 import Mokkogen from "./Mokkogen";
 import ManageSettings from "./ManageSettings";
+import Seeds from "./Seeds";
 
 import ManageNotes from "./ManageNotes";
 import NoteDetail from "./NoteDetail";
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
       {
         path: "mokkogen",
         element: <Mokkogen />,
+      },
+      {
+        path: "seeds",
+        element: <Seeds />,
       },
       {
         path: "manage/settings",
