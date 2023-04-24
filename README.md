@@ -4,7 +4,7 @@ _A local-first, feature-tweaked rewrite of the original project_
 
 ## What is it, why'd you build it, and why'd you build it like this?
 
-Great questions! You can get answers to all of those at -- in ascending order of detail/verbosity -- the (v1 repos)[https://github.com/ypaulsussman/mokko-web], the (lander)[https://www.suss.world/mokkogen], or the (about page)[https://www.suss.world/mokkogen].
+Great questions! You can get answers to all of those at -- in ascending order of detail/verbosity -- the [v1 repos](https://github.com/ypaulsussman/mokko-web), the [lander](https://www.suss.world/mokkogen), or the [about page](https://www.suss.world/mokkogen).
 
 ## Cool; how do I run it locally?
 
@@ -16,4 +16,4 @@ If running in a private session on Firefox, IndexedDB _might_ generate errors if
 
 `npm run build`, grab the `dist` file, upload wherever desired.
 
-"_Simple enough that even I feel like messing with it on Tuesday night in Minnesota_" is perhaps the most-stringent inertial threshold of them all... :)
+"_Simple enough that even I feel like messing with it on Tuesday night in Minnesota_" is perhaps the most-stringent inertial threshold of them all... 😇
